@@ -237,6 +237,14 @@
                                     <constraint firstItem="5y6-Vh-qse" firstAttribute="centerY" secondItem="Ggf-02-CHB" secondAttribute="centerY" id="Rdq-uy-xlq"/>
                                     <constraint firstItem="5y6-Vh-qse" firstAttribute="leading" secondItem="Ggf-02-CHB" secondAttribute="leadingMargin" constant="12" id="w5H-5E-lh1"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.56453876879999998" green="0.7524816647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="textLabel" destination="5y6-Vh-qse" id="kQ2-5N-teN"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="TextOnlyShowDetail" id="kXD-i5-5dv"/>

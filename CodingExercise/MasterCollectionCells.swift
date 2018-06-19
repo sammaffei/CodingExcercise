@@ -16,9 +16,22 @@ protocol SetDataProtocol
     func setData(inData : MasterCollectionViewController.ItemData)
     }
 
-class TextOnlyColCell : UICollectionViewCell, SetDataProtocol
+class SelectableColCell : UICollectionViewCell
+    {
+    @IBInspectable fileprivate var unselectedColor : UIColor!       // Make these inspectable so that you can
+    @IBInspectable fileprivate var selectedColor : UIColor!         // set them in interfacebuilder
+    }
+
+class TextOnlyColCell : SelectableColCell, SetDataProtocol
     {
     @IBOutlet weak private var textLabel : UILabel!
+    
+    override var isSelected: Bool{
+        didSet
+            {
+            self.contentView.backgroundColor = self.isSelected ? selectedColor : unselectedColor
+            }
+    }
     
     func setData(inData : MasterCollectionViewController.ItemData)
         {
@@ -26,7 +39,7 @@ class TextOnlyColCell : UICollectionViewCell, SetDataProtocol
         }
     }
 
-class IconColCell : UICollectionViewCell, SetDataProtocol
+class IconColCell : SelectableColCell, SetDataProtocol
     {
     @IBOutlet weak private var imageView : UIImageView!
     
