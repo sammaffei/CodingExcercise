@@ -1,5 +1,5 @@
 //
-//  MasterViewController.swift
+//  MasterTableViewController.swift
 //  CodingExcercise
 //
 //  Created by Samuel Maffei on 6/18/18.
@@ -23,7 +23,7 @@ struct ItemData
     }
 
 
-class MasterViewController: UITableViewController {
+class MasterTableViewController: UITableViewController {
     
     
     var tableDataArray : [ItemData] = []
