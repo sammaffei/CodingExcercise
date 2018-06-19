@@ -177,7 +177,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconCell" id="Ys4-4o-dUv" userLabel="Icon View Cell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="IconCell" id="Ys4-4o-dUv" userLabel="Icon View Cell" customClass="IconColCell" customModule="SimpsonsViewer" customModuleProvider="target">
                                 <rect key="frame" x="112.5" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -185,7 +185,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-nU-IHp">
-                                            <rect key="frame" x="4" y="4" width="142" height="142"/>
+                                            <rect key="frame" x="4" y="4" width="142" height="32"/>
                                         </imageView>
                                     </subviews>
                                 </view>
@@ -197,10 +197,11 @@
                                 </constraints>
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
+                                    <outlet property="imageView" destination="JHr-nU-IHp" id="7SR-kA-j1Q"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" id="X97-Tg-Bow"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TextOnlyCell" id="Ggf-02-CHB" userLabel="Text Only Cell">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="TextOnlyCell" id="Ggf-02-CHB" userLabel="Text Only Cell" customClass="TextOnlyColCell" customModule="SimpsonsViewer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="160" width="375" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -208,7 +209,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5y6-Vh-qse">
-                                            <rect key="frame" x="20" y="11" width="335" height="29"/>
+                                            <rect key="frame" x="20" y="-14.5" width="335" height="29"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="29" id="kNm-9A-9L6"/>
                                             </constraints>
@@ -224,6 +225,7 @@
                                     <constraint firstItem="5y6-Vh-qse" firstAttribute="leading" secondItem="Ggf-02-CHB" secondAttribute="leadingMargin" constant="12" id="w5H-5E-lh1"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="textLabel" destination="5y6-Vh-qse" id="kQ2-5N-teN"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" id="kXD-i5-5dv"/>
                                 </connections>
                             </collectionViewCell>
