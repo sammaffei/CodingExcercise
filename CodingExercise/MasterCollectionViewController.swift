@@ -87,6 +87,19 @@ class MasterCollectionViewController : UICollectionViewController
             }
         }
     
+    // MARK: - Collection View Stuff
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int
+        {
+        return 1
+        }
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+        {
+        return 0
+        //return tableDataArray.count
+        }
+    
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
