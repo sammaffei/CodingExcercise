@@ -54,7 +54,7 @@ class MasterViewController : UIViewController
         
         switch segue.identifier
             {
-            case "TableEmbedSegue":
+            case "CollectionEmbedSegue":
             
                 childTableViewVC = segue.destination as? MasterTableViewController
             
