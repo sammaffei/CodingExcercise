@@ -24,8 +24,11 @@ class DetailViewController: UIViewController {
         
         if let imgUrl = detailData.imageURL
             {
-            imageView.sd_setImage(with: imgUrl) { (image, err, cacheType, url) in
-                }
+            imageView.sd_setImage(with: imgUrl, completed: nil)
+            }
+        else
+            {
+            imageView.image = UIImage(named: "MissingImage")
             }
         
         textView.text = detailData.description
