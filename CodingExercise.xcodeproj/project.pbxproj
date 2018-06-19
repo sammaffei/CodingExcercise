@@ -12,6 +12,8 @@
 		4B1034E320D8776C00E77708 /* Consants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1034E120D8776C00E77708 /* Consants.swift */; };
 		4B383F0A20D8A64200708F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
 		4B383F0B20D8A64300708F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
+		4B3AC40E20D96E7D0062D12B /* MasterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */; };
+		4B3AC40F20D96E7D0062D12B /* MasterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */; };
 		4B85209C20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4B85209D20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4BFB768220D86F1B00F44CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */; };
@@ -34,6 +36,7 @@
 		14D73C9D2A6A979D86DFA5D1 /* Pods-SimpsonsViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpsonsViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-SimpsonsViewer/Pods-SimpsonsViewer.release.xcconfig"; sourceTree = "<group>"; };
 		2DEE740E07ADB7725232BBE5 /* Pods_WireViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WireViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B1034E120D8776C00E77708 /* Consants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consants.swift; sourceTree = "<group>"; };
+		4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCollectionViewController.swift; sourceTree = "<group>"; };
 		4B5B2E7C20D872280008050C /* WireViewer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WireViewer.plist; sourceTree = SOURCE_ROOT; };
 		4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SimpsonsViewer.plist; sourceTree = SOURCE_ROOT; };
 		4B85209B20D951B9003C447B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -118,6 +121,7 @@
 				4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */,
 				4B85209B20D951B9003C447B /* MasterViewController.swift */,
 				4BFB764920D86CAE00F44CF8 /* MasterTableViewController.swift */,
+				4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */,
 				4BFB764B20D86CAE00F44CF8 /* DetailViewController.swift */,
 				4BFB764D20D86CAE00F44CF8 /* Main.storyboard */,
 				4BFB765020D86CAF00F44CF8 /* Assets.xcassets */,
@@ -310,6 +314,7 @@
 			files = (
 				4B85209C20D951B9003C447B /* MasterViewController.swift in Sources */,
 				4BFB768420D86F1F00F44CF8 /* MasterTableViewController.swift in Sources */,
+				4B3AC40E20D96E7D0062D12B /* MasterCollectionViewController.swift in Sources */,
 				4BFB768220D86F1B00F44CF8 /* AppDelegate.swift in Sources */,
 				4B1034E220D8776C00E77708 /* Consants.swift in Sources */,
 				4BFB768620D86F2500F44CF8 /* DetailViewController.swift in Sources */,
@@ -322,6 +327,7 @@
 			files = (
 				4B85209D20D951B9003C447B /* MasterViewController.swift in Sources */,
 				4BFB768520D86F2000F44CF8 /* MasterTableViewController.swift in Sources */,
+				4B3AC40F20D96E7D0062D12B /* MasterCollectionViewController.swift in Sources */,
 				4BFB768320D86F1C00F44CF8 /* AppDelegate.swift in Sources */,
 				4B1034E320D8776C00E77708 /* Consants.swift in Sources */,
 				4BFB768720D86F2500F44CF8 /* DetailViewController.swift in Sources */,
