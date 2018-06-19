@@ -61,7 +61,9 @@
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" id="mOI-FS-AaM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="f7O-jV-N6Y"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="imageView" destination="1rC-ml-fYd" id="xJs-xT-mu1"/>
                         <outlet property="textView" destination="hAr-F4-aeY" id="Uew-kj-P2m"/>
@@ -153,7 +155,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOS-Rj-o5s"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KHO-gH-CbF"/>
+                    <navigationItem key="navigationItem" id="KHO-gH-CbF">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="U01-7O-hwk"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="modeSelectorHeightConstraint" destination="Nre-bp-LM0" id="e2e-kv-C5R"/>
                     </connections>
