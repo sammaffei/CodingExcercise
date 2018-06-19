@@ -12,7 +12,17 @@ class MasterViewController : UIViewController
     {
     @IBOutlet weak var modeSelectorHeightConstraint : NSLayoutConstraint?
     
+    var childTableViewVC : MasterTableViewController?
+    
     var defaultModeSelectorHeight : CGFloat = 0.0
+    
+    @IBAction func performModeSwitch(_ sender : UISegmentedControl)
+        {
+        guard let tableVC = childTableViewVC
+            else {return}
+        
+        tableVC.curTableMode = MasterTableViewController.MasterTableViewMode(rawValue: sender.selectedSegmentIndex)!
+        }
     
     override func viewDidLoad()
         {
@@ -37,6 +47,21 @@ class MasterViewController : UIViewController
             
         self.view.setNeedsLayout()
         }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // use embed segue to get the child table view controller and store it for later use.
+        
+        switch segue.identifier
+            {
+            case "TableEmbedSegue":
+            
+                childTableViewVC = segue.destination as? MasterTableViewController
+            
+            default:
+                break
+            }
+    }
     
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?)
         {

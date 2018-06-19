@@ -22,15 +22,19 @@ struct ItemData
         }
     }
 
-enum MasterTableViewMode : Int
-    {
-    case textMode = 0
-    case iconMode = 1
-    }
-
 
 class MasterTableViewController: UITableViewController {
     
+    enum MasterTableViewMode : Int
+        {case textOnly = 0, icon}
+
+    var curTableMode : MasterTableViewMode = .textOnly
+        {
+        didSet
+            {
+            tableView.reloadData()
+            }
+        }
     
     var tableDataArray : [ItemData] = []
 

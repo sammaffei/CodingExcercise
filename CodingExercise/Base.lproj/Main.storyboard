@@ -164,6 +164,9 @@
                                             <segment title="Text"/>
                                             <segment title="Icon"/>
                                         </segments>
+                                        <connections>
+                                            <action selector="performModeSwitch:" destination="uE2-Id-8pb" eventType="valueChanged" id="gev-HK-Heb"/>
+                                        </connections>
                                     </segmentedControl>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -176,7 +179,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-we-fyj" userLabel="Table Container">
                                 <rect key="frame" x="0.0" y="110" width="375" height="557"/>
                                 <connections>
-                                    <segue destination="7bK-jq-Zjz" kind="embed" id="ZPH-8S-4fX"/>
+                                    <segue destination="7bK-jq-Zjz" kind="embed" identifier="TableEmbedSegue" id="ZPH-8S-4fX"/>
                                 </connections>
                             </containerView>
                         </subviews>

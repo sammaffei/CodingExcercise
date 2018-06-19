@@ -116,6 +116,7 @@
 			children = (
 				4B1034E120D8776C00E77708 /* Consants.swift */,
 				4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */,
+				4B85209B20D951B9003C447B /* MasterViewController.swift */,
 				4BFB764920D86CAE00F44CF8 /* MasterTableViewController.swift */,
 				4BFB764B20D86CAE00F44CF8 /* DetailViewController.swift */,
 				4BFB764D20D86CAE00F44CF8 /* Main.storyboard */,
@@ -123,7 +124,6 @@
 				4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */,
 				4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */,
 				4B5B2E7C20D872280008050C /* WireViewer.plist */,
-				4B85209B20D951B9003C447B /* MasterViewController.swift */,
 			);
 			path = CodingExercise;
 			sourceTree = "<group>";
