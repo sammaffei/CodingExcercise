@@ -8,10 +8,26 @@
 
 import UIKit
 
+
+
 class MasterCollectionViewController : UICollectionViewController, UICollectionViewDelegateFlowLayout
     {
     enum CollectionViewMode : Int
         {case textOnly = 0, icon}
+    
+    struct ItemData
+        {
+        var title : String
+        var description : String
+        var imageURL: URL?
+        
+        init(inTitle : String, inDescription : String, inImageURL : URL?)
+            {
+            title = inTitle
+            description = inDescription
+            imageURL = inImageURL
+            }
+        }
     
     var curMode : CollectionViewMode = .textOnly
         {

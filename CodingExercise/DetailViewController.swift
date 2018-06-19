@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView : UIImageView!
     @IBOutlet weak var textView : UITextView!
 
-    var detailItem: ItemData?
+    var detailItem: MasterCollectionViewController.ItemData?
 
     func configureView() {
         // Update the user interface for the detail item.
