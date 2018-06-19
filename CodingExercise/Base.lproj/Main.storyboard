@@ -211,7 +211,7 @@
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
                                     <outlet property="imageView" destination="e1c-Lh-s4S" id="dFw-ra-oMi"/>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" id="X97-Tg-Bow"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="IconShowDetail" id="X97-Tg-Bow"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="TextOnlyCell" id="Ggf-02-CHB" userLabel="Text Only Cell" customClass="TextOnlyColCell" customModule="SimpsonsViewer" customModuleProvider="target">
@@ -239,7 +239,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="textLabel" destination="5y6-Vh-qse" id="kQ2-5N-teN"/>
-                                    <segue destination="vC3-pB-5Vb" kind="showDetail" id="kXD-i5-5dv"/>
+                                    <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="TextOnlyShowDetail" id="kXD-i5-5dv"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

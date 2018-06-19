@@ -151,16 +151,23 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
     // MARK: - Segues
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPaths = collectionView?.indexPathsForSelectedItems
-                {
+        
+        switch segue.identifier
+            {
+            case "TextOnlyShowDetail", "IconShowDetail":
+            
+                if let indexPaths = collectionView?.indexPathsForSelectedItems
+                    {
                     let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                     controller.detailItem = tableDataArray[indexPaths[0].item]
                     controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
-                }
-        }
-    }
+                    }
 
+            
+            default:
+                break
+            }
+        }
 
     }
