@@ -22,6 +22,12 @@ struct ItemData
         }
     }
 
+enum MasterTableViewMode : Int
+    {
+    case textMode = 0
+    case iconMode = 1
+    }
+
 
 class MasterTableViewController: UITableViewController {
     

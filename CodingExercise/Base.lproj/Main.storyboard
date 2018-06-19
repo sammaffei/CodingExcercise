@@ -193,6 +193,9 @@
                         <viewLayoutGuide key="safeArea" id="SOS-Rj-o5s"/>
                     </view>
                     <navigationItem key="navigationItem" id="KHO-gH-CbF"/>
+                    <connections>
+                        <outlet property="modeSelectorHeightConstraint" destination="Nre-bp-LM0" id="e2e-kv-C5R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVL-dN-baf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
