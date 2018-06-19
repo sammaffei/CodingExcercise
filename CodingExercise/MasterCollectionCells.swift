@@ -42,6 +42,15 @@ class TextOnlyColCell : SelectableColCell, SetDataProtocol
 class IconColCell : SelectableColCell, SetDataProtocol
     {
     @IBOutlet weak private var imageView : UIImageView!
+    @IBOutlet weak private var borderView : UIView!
+    
+    override var isSelected: Bool{
+        didSet
+            {
+            imageView.backgroundColor = self.isSelected ? selectedColor : unselectedColor
+            }
+        }
+
     
     func setData(inData : MasterCollectionViewController.ItemData)
         {

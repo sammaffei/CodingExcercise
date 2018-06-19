@@ -192,7 +192,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" white="0.8537905093" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="e1c-Lh-s4S" secondAttribute="bottom" constant="2" id="OKe-w7-hHs"/>
                                                 <constraint firstItem="e1c-Lh-s4S" firstAttribute="top" secondItem="M9o-0W-P9U" secondAttribute="top" constant="2" id="XaM-bd-eWy"/>
@@ -209,7 +209,16 @@
                                     <constraint firstAttribute="bottom" secondItem="M9o-0W-P9U" secondAttribute="bottom" id="mF1-QJ-cwA"/>
                                 </constraints>
                                 <size key="customSize" width="150" height="150"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="unselectedColor">
+                                        <color key="value" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
+                                        <color key="value" red="0.56453876879999998" green="0.7524816647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="borderView" destination="M9o-0W-P9U" id="wAl-FX-W6G"/>
                                     <outlet property="imageView" destination="e1c-Lh-s4S" id="dFw-ra-oMi"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="IconShowDetail" id="X97-Tg-Bow"/>
                                 </connections>
