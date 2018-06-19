@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="7bK-jq-Zjz" kind="relationship" relationship="rootViewController" id="tsl-Nk-0bq"/>
+                        <segue destination="uE2-Id-8pb" kind="relationship" relationship="rootViewController" id="mob-um-q4O"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8fS-aE-onr" sceneMemberID="firstResponder"/>
@@ -31,7 +31,7 @@
             <objects>
                 <viewController title="Detail" id="JEX-9P-axG" customClass="DetailViewController" customModule="SimpsonsViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MissingImage" translatesAutoresizingMaskIntoConstraints="NO" id="1rC-ml-fYd">
@@ -41,7 +41,7 @@
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click on a item to see it's description." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAr-F4-aeY">
-                                <rect key="frame" x="0.0" y="228" width="375" height="439"/>
+                                <rect key="frame" x="0.0" y="228" width="375" height="329"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -84,12 +84,12 @@
             </objects>
             <point key="canvasLocation" x="-856" y="-330"/>
         </scene>
-        <!--Master-->
+        <!--Master TableView Controller-->
         <scene sceneID="smW-Zh-WAh">
             <objects>
-                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" customClass="MasterTableViewController" customModule="SimpsonsViewer" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Master" clearsSelectionOnViewWillAppear="NO" id="7bK-jq-Zjz" userLabel="Master TableView Controller" customClass="MasterTableViewController" customModule="SimpsonsViewer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="r7i-6Z-zg0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
@@ -143,11 +143,66 @@
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
         </scene>
+        <!--Master View Controller-->
+        <scene sceneID="hcv-iS-ugM">
+            <objects>
+                <viewController id="uE2-Id-8pb" customClass="MasterViewController" customModule="SimpsonsViewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lg2-5T-LSf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Q4-8U6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="46"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Qe-zSL">
+                                        <rect key="frame" x="126" y="9" width="122" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="122" id="UGd-0Y-iV2"/>
+                                            <constraint firstAttribute="height" constant="28" id="dul-3o-CjH"/>
+                                        </constraints>
+                                        <segments>
+                                            <segment title="Text"/>
+                                            <segment title="Icon"/>
+                                        </segments>
+                                    </segmentedControl>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="Nre-bp-LM0"/>
+                                    <constraint firstItem="X1f-Qe-zSL" firstAttribute="centerX" secondItem="u1G-Q4-8U6" secondAttribute="centerX" id="UpM-m1-gv6"/>
+                                    <constraint firstItem="X1f-Qe-zSL" firstAttribute="centerY" secondItem="u1G-Q4-8U6" secondAttribute="centerY" id="lHI-gS-I9u"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-we-fyj" userLabel="Table Container">
+                                <rect key="frame" x="0.0" y="110" width="375" height="557"/>
+                                <connections>
+                                    <segue destination="7bK-jq-Zjz" kind="embed" id="ZPH-8S-4fX"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="u1G-Q4-8U6" firstAttribute="trailing" secondItem="SOS-Rj-o5s" secondAttribute="trailing" id="J08-Ez-YJ1"/>
+                            <constraint firstItem="u1G-Q4-8U6" firstAttribute="leading" secondItem="SOS-Rj-o5s" secondAttribute="leading" id="XuV-6I-AzY"/>
+                            <constraint firstItem="9aK-we-fyj" firstAttribute="bottom" secondItem="SOS-Rj-o5s" secondAttribute="bottom" id="Zxj-az-6Db"/>
+                            <constraint firstItem="u1G-Q4-8U6" firstAttribute="top" secondItem="SOS-Rj-o5s" secondAttribute="top" id="fmO-TR-YZ4"/>
+                            <constraint firstItem="9aK-we-fyj" firstAttribute="trailing" secondItem="SOS-Rj-o5s" secondAttribute="trailing" id="rKj-kG-Fr3"/>
+                            <constraint firstItem="9aK-we-fyj" firstAttribute="top" secondItem="u1G-Q4-8U6" secondAttribute="bottom" id="tZ3-3a-q6x"/>
+                            <constraint firstItem="9aK-we-fyj" firstAttribute="leading" secondItem="SOS-Rj-o5s" secondAttribute="leading" id="ucB-aW-rZO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SOS-Rj-o5s"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="KHO-gH-CbF"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rVL-dN-baf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1372" y="-1601.649175412294"/>
+        </scene>
     </scenes>
     <resources>
         <image name="MissingImage" width="246" height="245"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

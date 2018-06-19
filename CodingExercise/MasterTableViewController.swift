@@ -64,8 +64,6 @@ class MasterTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.title = Constants.DataTitleStr
-        
         let fetchTask = URLSession.shared.dataTask(with: Constants.APPRestURL)
             { (optData : Data?, optResp : URLResponse?, err:Error?) in
                 
