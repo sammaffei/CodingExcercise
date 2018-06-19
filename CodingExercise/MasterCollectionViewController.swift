@@ -40,6 +40,14 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
     var tableDataArray : [ItemData] = []
     
     var detailViewController: DetailViewController? = nil
+    
+    var haveCompactWidth : Bool
+        {
+        get
+            {
+            return self.splitViewController!.traitCollection.horizontalSizeClass == .compact
+            }
+        }
 
     // Build a struct array so that we don't have to parse a lot of junk on every reload
     
@@ -92,6 +100,16 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
                 DispatchQueue.main.async
                     {
                     self.collectionView?.reloadData()
+                        
+                    // Select the first item if our width is regular (means both panes can be visible at once.
+                        
+                    if (!self.haveCompactWidth) && (self.tableDataArray.count > 0)
+                        {
+                        let indexPathForFirstRow = IndexPath(row: 0, section: 0)
+                        self.collectionView?.selectItem(at: indexPathForFirstRow, animated: true, scrollPosition: .top)
+                            
+                        self.performSegue(withIdentifier: "TextOnlyShowDetail", sender: nil)
+                        }
                     }
             }
         
@@ -162,6 +180,14 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
                     controller.detailItem = tableDataArray[indexPaths[0].item]
                     controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
+                        
+                    // if compact width, we should deselect the item before we segue so it isn't selected when we come back
+                        
+                    if haveCompactWidth
+                        {
+                        collectionView?.selectItem(at: nil, animated: true, scrollPosition: [])
+                        }
+
                     }
 
             

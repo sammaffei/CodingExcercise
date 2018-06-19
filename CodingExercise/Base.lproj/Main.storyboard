@@ -35,13 +35,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="557"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MissingImage" translatesAutoresizingMaskIntoConstraints="NO" id="1rC-ml-fYd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1rC-ml-fYd">
                                 <rect key="frame" x="0.0" y="64" width="375" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="saJ-p1-QnK"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Click on a item to see it's description." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAr-F4-aeY">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hAr-F4-aeY">
                                 <rect key="frame" x="0.0" y="228" width="375" height="329"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -211,14 +211,13 @@
                                 <size key="customSize" width="150" height="150"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="unselectedColor">
-                                        <color key="value" white="0.90000000000000002" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectedColor">
                                         <color key="value" red="0.56453876879999998" green="0.7524816647" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outlet property="borderView" destination="M9o-0W-P9U" id="wAl-FX-W6G"/>
                                     <outlet property="imageView" destination="e1c-Lh-s4S" id="dFw-ra-oMi"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="IconShowDetail" id="X97-Tg-Bow"/>
                                 </connections>
@@ -271,9 +270,6 @@
             <point key="canvasLocation" x="1372" y="-810.0449775112445"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="MissingImage" width="246" height="245"/>
-    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="X97-Tg-Bow"/>
     </inferredMetricsTieBreakers>
