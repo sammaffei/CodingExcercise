@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MasterCollectionViewController : UICollectionViewController
+class MasterCollectionViewController : UICollectionViewController, UICollectionViewDelegateFlowLayout
     {
     enum CollectionViewMode : Int
         {case textOnly = 0, icon}
@@ -96,8 +96,40 @@ class MasterCollectionViewController : UICollectionViewController
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
         {
-        return 0
-        //return tableDataArray.count
+        return tableDataArray.count
+        }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+        {
+        switch curMode
+            {
+            case .textOnly:
+                return CGSize(width: collectionView.frame.width, height: 40.0)
+            
+            case .icon:
+                return CGSize(width: (collectionView.frame.width / 2) - 5, height: (collectionView.frame.width / 2) - 5)
+            }
+        
+        }
+
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
+        {
+        var cellIdentifier : String = ""
+            
+        switch curMode
+            {
+            case .textOnly:
+                cellIdentifier = "TextOnlyCell"
+                
+            case .icon:
+                cellIdentifier = "IconCell"
+            }
+
+        let dataProtocol = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! SetDataProtocol
+            
+        dataProtocol.setData(inData: tableDataArray[indexPath.item])
+        
+        return dataProtocol as! UICollectionViewCell
         }
     
     // MARK: - Segues

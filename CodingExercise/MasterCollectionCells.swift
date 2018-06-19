@@ -8,23 +8,28 @@
 
 import UIKit
 
-class TextOnlyColCell : UICollectionViewCell
+protocol SetDataProtocol
+    {
+    func setData(inData : ItemData)
+    }
+
+class TextOnlyColCell : UICollectionViewCell, SetDataProtocol
     {
     @IBOutlet weak private var textLabel : UILabel!
     
-    func setText(inText : String)
+    func setData(inData : ItemData)
         {
-        textLabel.text = inText
+        textLabel.text = inData.title
         }
     }
 
-class IconColCell : UICollectionViewCell
+class IconColCell : UICollectionViewCell, SetDataProtocol
     {
     @IBOutlet weak private var imageView : UIImageView!
     
-    func setImage(usingURL : URL?)
+    func setData(inData : ItemData)
         {
-        if let imgUrl = usingURL
+        if let imgUrl = inData.imageURL
             {
             imageView.sd_setImage(with: imgUrl, completed: nil)
             }

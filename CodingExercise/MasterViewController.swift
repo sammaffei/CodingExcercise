@@ -12,16 +12,16 @@ class MasterViewController : UIViewController
     {
     @IBOutlet weak var modeSelectorHeightConstraint : NSLayoutConstraint?
     
-    var childTableViewVC : MasterTableViewController?
+    var childCollectionVC : MasterCollectionViewController?
     
     var defaultModeSelectorHeight : CGFloat = 0.0
     
     @IBAction func performModeSwitch(_ sender : UISegmentedControl)
         {
-        guard let tableVC = childTableViewVC
+        guard let collectionVC = childCollectionVC
             else {return}
         
-        tableVC.curTableMode = MasterTableViewController.MasterTableViewMode(rawValue: sender.selectedSegmentIndex)!
+        collectionVC.curMode = MasterCollectionViewController.CollectionViewMode(rawValue: sender.selectedSegmentIndex)!
         }
     
     override func viewDidLoad()
@@ -50,13 +50,13 @@ class MasterViewController : UIViewController
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        // use embed segue to get the child table view controller and store it for later use.
+        // use embed segue to get the child collectionview controller and store it for later use.
         
         switch segue.identifier
             {
             case "CollectionEmbedSegue":
             
-                childTableViewVC = segue.destination as? MasterTableViewController
+                childCollectionVC = segue.destination as? MasterCollectionViewController
             
             default:
                 break

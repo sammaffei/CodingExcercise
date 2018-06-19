@@ -184,20 +184,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JHr-nU-IHp">
-                                            <rect key="frame" x="4" y="4" width="142" height="32"/>
-                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9o-0W-P9U">
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-Lh-s4S">
+                                                    <rect key="frame" x="2" y="2" width="146" height="36"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="e1c-Lh-s4S" secondAttribute="bottom" constant="2" id="OKe-w7-hHs"/>
+                                                <constraint firstItem="e1c-Lh-s4S" firstAttribute="top" secondItem="M9o-0W-P9U" secondAttribute="top" constant="2" id="XaM-bd-eWy"/>
+                                                <constraint firstAttribute="trailing" secondItem="e1c-Lh-s4S" secondAttribute="trailing" constant="2" id="YYQ-HY-LCA"/>
+                                                <constraint firstItem="e1c-Lh-s4S" firstAttribute="leading" secondItem="M9o-0W-P9U" secondAttribute="leading" constant="2" id="dm9-is-Kh1"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="JHr-nU-IHp" secondAttribute="trailing" constant="4" id="Cbn-Bj-C07"/>
-                                    <constraint firstItem="JHr-nU-IHp" firstAttribute="leading" secondItem="Ys4-4o-dUv" secondAttribute="leading" constant="4" id="c32-Bu-pcv"/>
-                                    <constraint firstItem="JHr-nU-IHp" firstAttribute="top" secondItem="Ys4-4o-dUv" secondAttribute="top" constant="4" id="mum-zJ-3gW"/>
-                                    <constraint firstAttribute="bottom" secondItem="JHr-nU-IHp" secondAttribute="bottom" constant="4" id="wnD-zJ-ghF"/>
+                                    <constraint firstAttribute="trailing" secondItem="M9o-0W-P9U" secondAttribute="trailing" id="RXO-gN-H8h"/>
+                                    <constraint firstItem="M9o-0W-P9U" firstAttribute="top" secondItem="Ys4-4o-dUv" secondAttribute="top" id="UxK-LY-XT8"/>
+                                    <constraint firstItem="M9o-0W-P9U" firstAttribute="leading" secondItem="Ys4-4o-dUv" secondAttribute="leading" id="W2C-N5-Hp4"/>
+                                    <constraint firstAttribute="bottom" secondItem="M9o-0W-P9U" secondAttribute="bottom" id="mF1-QJ-cwA"/>
                                 </constraints>
                                 <size key="customSize" width="150" height="150"/>
                                 <connections>
-                                    <outlet property="imageView" destination="JHr-nU-IHp" id="7SR-kA-j1Q"/>
+                                    <outlet property="imageView" destination="e1c-Lh-s4S" id="dFw-ra-oMi"/>
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" id="X97-Tg-Bow"/>
                                 </connections>
                             </collectionViewCell>
@@ -238,7 +251,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fyM-VI-BcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="-810"/>
+            <point key="canvasLocation" x="1372" y="-810.0449775112445"/>
         </scene>
     </scenes>
     <resources>
