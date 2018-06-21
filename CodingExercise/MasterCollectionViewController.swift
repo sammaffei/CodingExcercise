@@ -29,10 +29,23 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
             }
         }
     
+    // what's the current cell type?
+    
+    var curCellIdentifier : String = TextOnlyColCell.cellIdentifer
+    
     var curMode : CollectionViewMode = .textOnly
         {
         didSet
             {
+            switch curMode          // set the current cell type based on the mode assignment
+                {
+                case .textOnly:
+                    curCellIdentifier = TextOnlyColCell.cellIdentifer
+                case .icon:
+                    curCellIdentifier = IconColCell.cellIdentifer
+                }
+                
+                
             self.collectionView?.reloadData()
             }
         }
@@ -148,18 +161,7 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
         {
-        var cellIdentifier : String = ""
-            
-        switch curMode
-            {
-            case .textOnly:
-                cellIdentifier = "TextOnlyCell"
-                
-            case .icon:
-                cellIdentifier = "IconCell"
-            }
-
-        let dataProtocol = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! SetDataProtocol
+        let dataProtocol = collectionView.dequeueReusableCell(withReuseIdentifier: curCellIdentifier, for: indexPath) as! SetDataProtocol
             
         dataProtocol.setData(inData: tableDataArray[indexPath.item])
         

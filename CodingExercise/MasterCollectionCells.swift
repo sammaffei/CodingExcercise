@@ -13,6 +13,8 @@ import UIKit
 
 protocol SetDataProtocol
     {
+    static var cellIdentifer: String { get }
+    
     func setData(inData : MasterCollectionViewController.ItemData)
     }
 
@@ -25,6 +27,8 @@ class SelectableColCell : UICollectionViewCell
 class TextOnlyColCell : SelectableColCell, SetDataProtocol
     {
     @IBOutlet weak private var textLabel : UILabel!
+    
+    static var cellIdentifer = "TextOnlyCell"
     
     override var isSelected: Bool{
         didSet
@@ -42,6 +46,8 @@ class TextOnlyColCell : SelectableColCell, SetDataProtocol
 class IconColCell : SelectableColCell, SetDataProtocol
     {
     @IBOutlet weak private var imageView : UIImageView!
+    
+    static var cellIdentifer = "IconCell"
     
     override var isSelected: Bool{
         didSet
