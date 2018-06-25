@@ -117,7 +117,7 @@
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Qe-zSL">
                                         <rect key="frame" x="126" y="9" width="122" height="29"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="122" id="UGd-0Y-iV2"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="UGd-0Y-iV2"/>
                                             <constraint firstAttribute="height" constant="28" id="dul-3o-CjH"/>
                                         </constraints>
                                         <segments>
