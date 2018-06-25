@@ -81,6 +81,10 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
         {
+        // Looked into warning. This appears to be an interface builder bug where it tries to flag you for
+        // no fixed sized items (like you may have mad a mistake). I like to remove warnings too, but this one is
+        // way off base.
+            
         switch curMode
             {
             case .textOnly:
