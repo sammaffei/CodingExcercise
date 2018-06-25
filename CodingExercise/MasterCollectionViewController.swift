@@ -37,7 +37,6 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
             }
         }
     
-    
     var detailViewController: DetailViewController? = nil
     
     var haveCompactWidth : Bool
@@ -52,22 +51,12 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
     override func viewDidLoad() {
             super.viewDidLoad()
         
-        DataMgr.sharedInstance.fetchJSONData(compProc:
-            {
-            self.collectionView?.reloadData()
+            // add and be notifed if model changes
 
-            // Select the first item if our width is regular (means both panes can be visible at once.
-                
-            if (!self.haveCompactWidth) && (DataMgr.sharedInstance.dataModelArray.count > 0)
+            DataMgr.sharedInstance.addDataModelObserver(indentifer: String(describing: MasterCollectionViewController.self))
                 {
-                let indexPathForFirstRow = IndexPath(row: 0, section: 0)
-                self.collectionView?.selectItem(at: indexPathForFirstRow, animated: true, scrollPosition: .top)
-                    
-                self.performSegue(withIdentifier: "TextOnlyShowDetail", sender: nil)
+                self.collectionView?.reloadData()
                 }
-
-            },
-            errorProc: nil)
         
             if let split = splitViewController {
                 let controllers = split.viewControllers

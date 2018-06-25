@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
         splitViewController.delegate = self
         
+        DataMgr.sharedInstance.fetchJSONData(errorProc: nil)
+        
         return true
     }
 

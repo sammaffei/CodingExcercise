@@ -5,7 +5,8 @@
 //  Created by Samuel Maffei on 6/25/18.
 //  Copyright © 2018 xfinity. All rights reserved.
 //
-//  Class for hadning data retrieval in the dat nodel for later access
+//  Class for hadning data retrieval in the data nodel for later access
+//  Data model uses KVO to signal changes to observaers
 //
 
 import Foundation
@@ -13,9 +14,11 @@ import Foundation
 typealias FetchErrorProc = (Error?) ->Void
 typealias FetchCompletionProc = ()->Void
 
+typealias DataModelUpdatedProc = ()->Void
+
 private let _DataMgrSharedInstance = DataMgr()
 
-class DataMgr
+@objcMembers class DataMgr : NSObject
     {
     class var sharedInstance: DataMgr {
         return _DataMgrSharedInstance
@@ -37,7 +40,9 @@ class DataMgr
     
     var dataModelArray : [ItemData] = []
     
-    // Build a struct array so that we don't have to parse a lot of junk on every reload
+    dynamic var modelLastUpdated = Date()                                       // Key KVO off of last updated date
+    
+    fileprivate var observersDict : [String : NSKeyValueObservation] = [:]      // store all KVO procs here, so callers just have to provide proc
     
     fileprivate func buildTableData(topicsArray : NSArray)
     {
@@ -68,7 +73,7 @@ class DataMgr
         }
     }
 
-    func fetchJSONData(compProc : FetchCompletionProc?, errorProc : FetchErrorProc?)
+    func fetchJSONData(errorProc : FetchErrorProc?)
         {
         let fetchTask = URLSession.shared.dataTask(with: Constants.APPRestURL)
             { (optData : Data?, optResp : URLResponse?, err:Error?) in
@@ -82,7 +87,7 @@ class DataMgr
                         let relatedTopicsArray = relatedTopics as? NSArray
                     else
                         {
-                        errorProc?(err)         // This will be ok, because at this point there will be an error or something unexpected ocurred witht he
+                        errorProc?(err)         // This will be ok, because at this point there will be an error or something unexpected ocurred within the
                         return                  // data model
                         }
         
@@ -90,13 +95,27 @@ class DataMgr
         
                 DispatchQueue.main.async
                     {
-                    if let _ = optData
-                        {
-                        compProc?()
-                        }
+                    self.modelLastUpdated = Date()       // udoate this in case someone observing, KVO is based on changed date of last fetch
                     }
             }
     
         fetchTask.resume()
         }
-    }
+    
+    func addDataModelObserver(indentifer: String, proc : @escaping DataModelUpdatedProc)
+        {
+        // Add a proc to the dict of observers. This mdoel uses KVO to directly signal changes on the data.
+        // It is more direct than the NSNotificationCenter approach (and easier to debug)
+        // The dict just saves observers so that they don't go away unless some ones them to be removed
+            
+        observersDict[indentifer] = self.observe(\.modelLastUpdated)
+                {(mgr, change) in
+                    proc()
+                }
+        }
+
+    func removeDataModelObserver(indentifer: String)
+        {
+        observersDict.removeValue(forKey: indentifer)
+        }
+}
