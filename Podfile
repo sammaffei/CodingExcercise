@@ -8,12 +8,14 @@ use_frameworks!
 target 'SimpsonsViewer' do
 
 	pod 'SDWebImage'
+	pod 'MBProgressHUD'
 
 end
 
 target 'WireViewer' do
 
 	pod 'SDWebImage'
+	pod 'MBProgressHUD'
 
 end
 
