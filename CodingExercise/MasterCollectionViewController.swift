@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-
+import MBProgressHUD
 
 class MasterCollectionViewController : UICollectionViewController, UICollectionViewDelegateFlowLayout
     {
@@ -56,12 +55,16 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
             DataMgr.sharedInstance.addDataModelObserver(indentifer: String(describing: MasterCollectionViewController.self))
                 {
                 self.collectionView?.reloadData()
+                    
+                MBProgressHUD.hide(for: self.view, animated: true) // hide progress hud
                 }
         
             if let split = splitViewController {
                 let controllers = split.viewControllers
                 detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
             }
+        
+            MBProgressHUD.showAdded(to: self.view, animated: true)  // show progress hud
         }
     
     // MARK: - Collection View Stuff
