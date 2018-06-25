@@ -15,19 +15,6 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
     enum CollectionViewMode : Int
         {case textOnly = 0, icon}
     
-    struct ItemData
-        {
-        var title : String
-        var description : String
-        var imageURL: URL?
-        
-        init(inTitle : String, inDescription : String, inImageURL : URL?)
-            {
-            title = inTitle
-            description = inDescription
-            imageURL = inImageURL
-            }
-        }
     
     // what's the current cell type?
     
@@ -50,7 +37,6 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
             }
         }
     
-    var tableDataArray : [ItemData] = []
     
     var detailViewController: DetailViewController? = nil
     
@@ -62,71 +48,26 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
             }
         }
 
-    // Build a struct array so that we don't have to parse a lot of junk on every reload
-    
-    func buildTableData(topicsArray : NSArray)
-        {
-        tableDataArray = []
-        
-        for anItem in topicsArray
-            {
-            var imageURL : URL?
-            
-            guard let itemDict = anItem as? NSDictionary,
-                let textItem = itemDict.object(forKey: "Text") as? String   // Don't even have text, so skip to next one
-                else {continue}
-            
-            if let iconDict = itemDict.value(forKey: "Icon") as? NSDictionary,  // get the image url, by doing this walk and checking size
-                let urlStr = iconDict.value(forKey: "URL") as? String,
-                urlStr.count > 0
-                {
-                imageURL = URL(string: urlStr)
-                }
-            
-            let itemsSeparated = textItem.components(separatedBy: " - ")    // Split text and description, easy enough. If more coplicated
-            // would use regular expression
-            
-            if itemsSeparated.count == 2
-                {
-                tableDataArray.append( ItemData(inTitle: itemsSeparated[0], inDescription: itemsSeparated[1], inImageURL: imageURL))
-                }
-            }
-        }
     
     override func viewDidLoad() {
             super.viewDidLoad()
         
-            let fetchTask = URLSession.shared.dataTask(with: Constants.APPRestURL)
-            { (optData : Data?, optResp : URLResponse?, err:Error?) in
+        DataMgr.sharedInstance.fetchJSONData(compProc:
+            {
+            self.collectionView?.reloadData()
+
+            // Select the first item if our width is regular (means both panes can be visible at once.
                 
-                // if any of these conditions fail, then bail. We can't do the work
-                
-                guard   let jsonData = optData,
-                    let jsonResult = try? JSONSerialization.jsonObject(with: jsonData, options: JSONSerialization.ReadingOptions.init(rawValue: 0)),
-                    let jsonDict = jsonResult as? NSDictionary,
-                    let relatedTopics = jsonDict.object(forKey: "RelatedTopics"),
-                    let relatedTopicsArray = relatedTopics as? NSArray
-                    else {return}
-                
-                self.buildTableData(topicsArray : relatedTopicsArray)
-                
-                DispatchQueue.main.async
-                    {
-                    self.collectionView?.reloadData()
-                        
-                    // Select the first item if our width is regular (means both panes can be visible at once.
-                        
-                    if (!self.haveCompactWidth) && (self.tableDataArray.count > 0)
-                        {
-                        let indexPathForFirstRow = IndexPath(row: 0, section: 0)
-                        self.collectionView?.selectItem(at: indexPathForFirstRow, animated: true, scrollPosition: .top)
-                            
-                        self.performSegue(withIdentifier: "TextOnlyShowDetail", sender: nil)
-                        }
-                    }
-            }
-        
-            fetchTask.resume()
+            if (!self.haveCompactWidth) && (DataMgr.sharedInstance.dataModelArray.count > 0)
+                {
+                let indexPathForFirstRow = IndexPath(row: 0, section: 0)
+                self.collectionView?.selectItem(at: indexPathForFirstRow, animated: true, scrollPosition: .top)
+                    
+                self.performSegue(withIdentifier: "TextOnlyShowDetail", sender: nil)
+                }
+
+            },
+            errorProc: nil)
         
             if let split = splitViewController {
                 let controllers = split.viewControllers
@@ -143,7 +84,7 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
         {
-        return tableDataArray.count
+        return DataMgr.sharedInstance.dataModelArray.count
         }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
@@ -163,7 +104,7 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
         {
         let dataProtocol = collectionView.dequeueReusableCell(withReuseIdentifier: curCellIdentifier, for: indexPath) as! SetDataProtocol
             
-        dataProtocol.setData(inData: tableDataArray[indexPath.item])
+        dataProtocol.setData(inData: DataMgr.sharedInstance.dataModelArray[indexPath.item])
         
         return dataProtocol as! UICollectionViewCell
         }
@@ -179,7 +120,7 @@ class MasterCollectionViewController : UICollectionViewController, UICollectionV
                 if let indexPaths = collectionView?.indexPathsForSelectedItems
                     {
                     let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                    controller.detailItem = tableDataArray[indexPaths[0].item]
+                    controller.detailItem = DataMgr.sharedInstance.dataModelArray[indexPaths[0].item]
                     controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                     controller.navigationItem.leftItemsSupplementBackButton = true
                         

@@ -15,7 +15,7 @@ protocol SetDataProtocol
     {
     static var cellIdentifer: String { get }
     
-    func setData(inData : MasterCollectionViewController.ItemData)
+    func setData(inData : DataMgr.ItemData)
     }
 
 class SelectableColCell : UICollectionViewCell
@@ -37,7 +37,7 @@ class TextOnlyColCell : SelectableColCell, SetDataProtocol
             }
     }
     
-    func setData(inData : MasterCollectionViewController.ItemData)
+    func setData(inData : DataMgr.ItemData)
         {
         textLabel.text = inData.title
         }
@@ -57,7 +57,7 @@ class IconColCell : SelectableColCell, SetDataProtocol
         }
 
     
-    func setData(inData : MasterCollectionViewController.ItemData)
+    func setData(inData : DataMgr.ItemData)
         {
         if let imgUrl = inData.imageURL
             {
