@@ -20,6 +20,15 @@
 		4B4BA49C20E13483004042C1 /* DataMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BA49A20E13483004042C1 /* DataMgr.swift */; };
 		4B85209C20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4B85209D20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
+		4BFAC5FD20E84BAF00CC331C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F620E84BAF00CC331C /* DetailViewController.m */; };
+		4BFAC5FE20E84BAF00CC331C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F820E84BAF00CC331C /* main.m */; };
+		4BFAC5FF20E84BAF00CC331C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F920E84BAF00CC331C /* AppDelegate.m */; };
+		4BFAC60020E84BAF00CC331C /* SimpsonsViewerOC.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */; };
+		4BFAC60120E84BAF00CC331C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */; };
+		4BFAC60220E84C1E00CC331C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB764D20D86CAE00F44CF8 /* Main.storyboard */; };
+		4BFAC60320E84C2200CC331C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
+		4BFAC60420E84C2600CC331C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */; };
+		4BFAC60520E84C2E00CC331C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB768C20D8703600F44CF8 /* Default-568h@2x.png */; };
 		4BFB768220D86F1B00F44CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */; };
 		4BFB768320D86F1C00F44CF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */; };
 		4BFB768620D86F2500F44CF8 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BFB764B20D86CAE00F44CF8 /* DetailViewController.swift */; };
@@ -44,6 +53,15 @@
 		4B5B2E7C20D872280008050C /* WireViewer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WireViewer.plist; sourceTree = SOURCE_ROOT; };
 		4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SimpsonsViewer.plist; sourceTree = SOURCE_ROOT; };
 		4B85209B20D951B9003C447B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		4BFAC5DA20E84A9400CC331C /* SimpsonsViewerOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsViewerOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BFAC5F520E84BAF00CC331C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4BFAC5F620E84BAF00CC331C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		4BFAC5F720E84BAF00CC331C /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		4BFAC5F820E84BAF00CC331C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4BFAC5F920E84BAF00CC331C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SimpsonsViewerOC.plist; sourceTree = "<group>"; };
+		4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		4BFAC5FC20E84BAF00CC331C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BFB764B20D86CAE00F44CF8 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		4BFB764E20D86CAE00F44CF8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,6 +76,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4BFAC5D720E84A9400CC331C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BFB765C20D86CEF00F44CF8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +136,20 @@
 			path = Swift;
 			sourceTree = "<group>";
 		};
+		4BFAC5F420E84BAF00CC331C /* ObjectiveC */ = {
+			isa = PBXGroup;
+			children = (
+				4BFAC5F520E84BAF00CC331C /* AppDelegate.h */,
+				4BFAC5F620E84BAF00CC331C /* DetailViewController.m */,
+				4BFAC5F720E84BAF00CC331C /* MasterViewController.h */,
+				4BFAC5F820E84BAF00CC331C /* main.m */,
+				4BFAC5F920E84BAF00CC331C /* AppDelegate.m */,
+				4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */,
+				4BFAC5FC20E84BAF00CC331C /* DetailViewController.h */,
+			);
+			path = ObjectiveC;
+			sourceTree = "<group>";
+		};
 		4BFB763B20D86CAE00F44CF8 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +166,7 @@
 			children = (
 				4BFB765F20D86CEF00F44CF8 /* SimpsonsViewer.app */,
 				4BFB768020D86D4700F44CF8 /* WireViewer.app */,
+				4BFAC5DA20E84A9400CC331C /* SimpsonsViewerOC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -134,10 +174,12 @@
 		4BFB764620D86CAE00F44CF8 /* CodingExercise */ = {
 			isa = PBXGroup;
 			children = (
+				4BFAC5F420E84BAF00CC331C /* ObjectiveC */,
 				4BFAC5B020E847FC00CC331C /* Swift */,
 				4BFB764D20D86CAE00F44CF8 /* Main.storyboard */,
 				4BFB765020D86CAF00F44CF8 /* Assets.xcassets */,
 				4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */,
+				4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */,
 				4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */,
 				4B5B2E7C20D872280008050C /* WireViewer.plist */,
 			);
@@ -147,6 +189,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4BFAC5D920E84A9400CC331C /* SimpsonsViewerOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BFAC5F020E84A9500CC331C /* Build configuration list for PBXNativeTarget "SimpsonsViewerOC" */;
+			buildPhases = (
+				4BFAC5D620E84A9400CC331C /* Sources */,
+				4BFAC5D720E84A9400CC331C /* Frameworks */,
+				4BFAC5D820E84A9400CC331C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpsonsViewerOC;
+			productName = SimpsonsViewerOC;
+			productReference = 4BFAC5DA20E84A9400CC331C /* SimpsonsViewerOC.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4BFB765E20D86CEF00F44CF8 /* SimpsonsViewer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BFB767020D86CF000F44CF8 /* Build configuration list for PBXNativeTarget "SimpsonsViewer" */;
@@ -195,6 +254,9 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = xfinity;
 				TargetAttributes = {
+					4BFAC5D920E84A9400CC331C = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					4BFB765E20D86CEF00F44CF8 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -215,11 +277,24 @@
 			targets = (
 				4BFB765E20D86CEF00F44CF8 /* SimpsonsViewer */,
 				4BFB767320D86D4700F44CF8 /* WireViewer */,
+				4BFAC5D920E84A9400CC331C /* SimpsonsViewerOC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4BFAC5D820E84A9400CC331C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFAC60020E84BAF00CC331C /* SimpsonsViewerOC.plist in Resources */,
+				4BFAC60420E84C2600CC331C /* LaunchScreen.storyboard in Resources */,
+				4BFAC60320E84C2200CC331C /* Assets.xcassets in Resources */,
+				4BFAC60520E84C2E00CC331C /* Default-568h@2x.png in Resources */,
+				4BFAC60220E84C1E00CC331C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BFB765D20D86CEF00F44CF8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -324,6 +399,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4BFAC5D620E84A9400CC331C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BFAC5FD20E84BAF00CC331C /* DetailViewController.m in Sources */,
+				4BFAC60120E84BAF00CC331C /* MasterViewController.m in Sources */,
+				4BFAC5FE20E84BAF00CC331C /* main.m in Sources */,
+				4BFAC5FF20E84BAF00CC331C /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BFB765B20D86CEF00F44CF8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -374,6 +460,40 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4BFAC5F120E84A9500CC331C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BB7XDTTD86;
+				INFOPLIST_FILE = "$(SRCROOT)/CodingExercise/SimpsonsViewerOC.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei..SimpsonsViewerOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BFAC5F220E84A9500CC331C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BB7XDTTD86;
+				INFOPLIST_FILE = "$(SRCROOT)/CodingExercise/SimpsonsViewerOC.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei..SimpsonsViewerOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4BFB765620D86CAF00F44CF8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -571,6 +691,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4BFAC5F020E84A9500CC331C /* Build configuration list for PBXNativeTarget "SimpsonsViewerOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BFAC5F120E84A9500CC331C /* Debug */,
+				4BFAC5F220E84A9500CC331C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4BFB763F20D86CAE00F44CF8 /* Build configuration list for PBXProject "CodingExercise" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
