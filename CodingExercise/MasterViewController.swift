@@ -74,4 +74,12 @@ class MasterViewController : UIViewController
             
         setModeSelectorVisibilty(visible: splitPlaneVC.traitCollection.horizontalSizeClass == .compact)
         }
+    
+    override func didRotate(from fromInterfaceOrientation: UIInterfaceOrientation)
+        {
+        // Fixed problem were cells weren't updating correct;y with rotation.
+            
+        childCollectionVC?.collectionView?.reloadData()
+        }
+    
     }

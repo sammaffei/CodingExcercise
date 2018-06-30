@@ -111,60 +111,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Q4-8U6">
-                                <rect key="frame" x="0.0" y="64" width="414" height="46"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpf-89-J1z">
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Qe-zSL">
-                                        <rect key="frame" x="145.66666666666666" y="9" width="121.99999999999997" height="29"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Q4-8U6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Qe-zSL">
+                                                <rect key="frame" x="145.66666666666666" y="9" width="121.99999999999997" height="29"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <segments>
+                                                    <segment title="Text"/>
+                                                    <segment title="Icon"/>
+                                                </segments>
+                                                <connections>
+                                                    <action selector="performModeSwitch:" destination="uE2-Id-8pb" eventType="valueChanged" id="gev-HK-Heb"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="122" id="UGd-0Y-iV2"/>
-                                            <constraint firstAttribute="height" constant="28" id="dul-3o-CjH"/>
+                                            <constraint firstAttribute="height" constant="46" id="qSo-RC-gRZ"/>
                                         </constraints>
-                                        <segments>
-                                            <segment title="Text"/>
-                                            <segment title="Icon"/>
-                                        </segments>
+                                    </view>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-we-fyj" userLabel="Table Container">
+                                        <rect key="frame" x="0.0" y="46" width="414" height="626"/>
                                         <connections>
-                                            <action selector="performModeSwitch:" destination="uE2-Id-8pb" eventType="valueChanged" id="gev-HK-Heb"/>
+                                            <segue destination="0Vb-mz-0MP" kind="embed" identifier="CollectionEmbedSegue" id="wFY-62-ydo"/>
                                         </connections>
-                                    </segmentedControl>
+                                    </containerView>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="Nre-bp-LM0"/>
-                                    <constraint firstItem="X1f-Qe-zSL" firstAttribute="centerX" secondItem="u1G-Q4-8U6" secondAttribute="centerX" id="UpM-m1-gv6"/>
-                                    <constraint firstItem="X1f-Qe-zSL" firstAttribute="centerY" secondItem="u1G-Q4-8U6" secondAttribute="centerY" id="lHI-gS-I9u"/>
+                                    <constraint firstItem="u1G-Q4-8U6" firstAttribute="top" secondItem="Wpf-89-J1z" secondAttribute="top" id="Xf6-i3-MOT"/>
+                                    <constraint firstAttribute="trailing" secondItem="9aK-we-fyj" secondAttribute="trailing" id="avw-8l-7IS"/>
+                                    <constraint firstItem="9aK-we-fyj" firstAttribute="leading" secondItem="Wpf-89-J1z" secondAttribute="leading" id="fJ6-rM-4Ks"/>
+                                    <constraint firstItem="u1G-Q4-8U6" firstAttribute="leading" secondItem="Wpf-89-J1z" secondAttribute="leading" id="hqA-m1-8gk"/>
+                                    <constraint firstAttribute="trailing" secondItem="u1G-Q4-8U6" secondAttribute="trailing" id="iHl-oi-Jyl"/>
+                                    <constraint firstAttribute="bottom" secondItem="9aK-we-fyj" secondAttribute="bottom" id="jm5-CW-oOs"/>
+                                    <constraint firstItem="9aK-we-fyj" firstAttribute="top" secondItem="u1G-Q4-8U6" secondAttribute="bottom" id="snt-46-RTv"/>
                                 </constraints>
                             </view>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-we-fyj" userLabel="Table Container">
-                                <rect key="frame" x="0.0" y="110" width="414" height="626"/>
-                                <connections>
-                                    <segue destination="0Vb-mz-0MP" kind="embed" identifier="CollectionEmbedSegue" id="wFY-62-ydo"/>
-                                </connections>
-                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="u1G-Q4-8U6" firstAttribute="trailing" secondItem="SOS-Rj-o5s" secondAttribute="trailing" id="J08-Ez-YJ1"/>
-                            <constraint firstItem="u1G-Q4-8U6" firstAttribute="leading" secondItem="SOS-Rj-o5s" secondAttribute="leading" id="XuV-6I-AzY"/>
-                            <constraint firstItem="9aK-we-fyj" firstAttribute="bottom" secondItem="SOS-Rj-o5s" secondAttribute="bottom" id="Zxj-az-6Db"/>
-                            <constraint firstItem="u1G-Q4-8U6" firstAttribute="top" secondItem="SOS-Rj-o5s" secondAttribute="top" id="fmO-TR-YZ4"/>
-                            <constraint firstItem="9aK-we-fyj" firstAttribute="trailing" secondItem="SOS-Rj-o5s" secondAttribute="trailing" id="rKj-kG-Fr3"/>
-                            <constraint firstItem="9aK-we-fyj" firstAttribute="top" secondItem="u1G-Q4-8U6" secondAttribute="bottom" id="tZ3-3a-q6x"/>
-                            <constraint firstItem="9aK-we-fyj" firstAttribute="leading" secondItem="SOS-Rj-o5s" secondAttribute="leading" id="ucB-aW-rZO"/>
+                            <constraint firstItem="Wpf-89-J1z" firstAttribute="top" secondItem="SOS-Rj-o5s" secondAttribute="top" id="LaA-jh-9BX"/>
+                            <constraint firstItem="Wpf-89-J1z" firstAttribute="trailing" secondItem="SOS-Rj-o5s" secondAttribute="trailing" id="ReH-vq-yoD"/>
+                            <constraint firstItem="Wpf-89-J1z" firstAttribute="bottom" secondItem="SOS-Rj-o5s" secondAttribute="bottom" id="oax-iy-EhF"/>
+                            <constraint firstItem="Wpf-89-J1z" firstAttribute="leading" secondItem="SOS-Rj-o5s" secondAttribute="leading" id="yK3-20-NoL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SOS-Rj-o5s"/>
                     </view>
                     <navigationItem key="navigationItem" id="KHO-gH-CbF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="U01-7O-hwk"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="modeSelectorHeightConstraint" destination="Nre-bp-LM0" id="e2e-kv-C5R"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVL-dN-baf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1372" y="-1601.649175412294"/>
+            <point key="canvasLocation" x="1371.0144927536232" y="-1601.9021739130435"/>
         </scene>
         <!--Master CollectionView Controller-->
         <scene sceneID="hI5-dc-yhf">
@@ -181,7 +184,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IconCell" id="Ys4-4o-dUv" userLabel="Icon View Cell" customClass="IconColCell" customModule="SimpsonsViewer" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="IconCell" id="Ys4-4o-dUv" userLabel="Icon View Cell" customClass="IconColCell" customModule="SimpsonsViewer" customModuleProvider="target">
                                 <rect key="frame" x="132" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -189,10 +192,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9o-0W-P9U">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="150" height="40"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e1c-Lh-s4S">
-                                                    <rect key="frame" x="2" y="2" width="146" height="146"/>
+                                                    <rect key="frame" x="2" y="2" width="146" height="36"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
