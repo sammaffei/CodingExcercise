@@ -97,6 +97,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4BFAC5B020E847FC00CC331C /* Swift */ = {
+			isa = PBXGroup;
+			children = (
+				4B4BA49A20E13483004042C1 /* DataMgr.swift */,
+				4B1034E120D8776C00E77708 /* Consants.swift */,
+				4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */,
+				4B85209B20D951B9003C447B /* MasterViewController.swift */,
+				4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */,
+				4B3AC41020D97B140062D12B /* MasterCollectionCells.swift */,
+				4BFB764B20D86CAE00F44CF8 /* DetailViewController.swift */,
+			);
+			path = Swift;
+			sourceTree = "<group>";
+		};
 		4BFB763B20D86CAE00F44CF8 = {
 			isa = PBXGroup;
 			children = (
@@ -120,13 +134,7 @@
 		4BFB764620D86CAE00F44CF8 /* CodingExercise */ = {
 			isa = PBXGroup;
 			children = (
-				4B4BA49A20E13483004042C1 /* DataMgr.swift */,
-				4B1034E120D8776C00E77708 /* Consants.swift */,
-				4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */,
-				4B85209B20D951B9003C447B /* MasterViewController.swift */,
-				4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */,
-				4B3AC41020D97B140062D12B /* MasterCollectionCells.swift */,
-				4BFB764B20D86CAE00F44CF8 /* DetailViewController.swift */,
+				4BFAC5B020E847FC00CC331C /* Swift */,
 				4BFB764D20D86CAE00F44CF8 /* Main.storyboard */,
 				4BFB765020D86CAF00F44CF8 /* Assets.xcassets */,
 				4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */,
