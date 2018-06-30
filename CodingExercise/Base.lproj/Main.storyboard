@@ -117,9 +117,11 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Q4-8U6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Qe-zSL">
-                                                <rect key="frame" x="145.66666666666666" y="9" width="121.99999999999997" height="29"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Qe-zSL">
+                                                <rect key="frame" x="157" y="9" width="100" height="29"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="4Mv-Cj-xwJ"/>
+                                                </constraints>
                                                 <segments>
                                                     <segment title="Text"/>
                                                     <segment title="Icon"/>
@@ -131,6 +133,8 @@
                                         </subviews>
                                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="X1f-Qe-zSL" firstAttribute="centerY" secondItem="u1G-Q4-8U6" secondAttribute="centerY" id="4k1-78-A0q"/>
+                                            <constraint firstItem="X1f-Qe-zSL" firstAttribute="centerX" secondItem="u1G-Q4-8U6" secondAttribute="centerX" id="REP-Yj-18Q"/>
                                             <constraint firstAttribute="height" constant="46" id="qSo-RC-gRZ"/>
                                         </constraints>
                                     </view>
