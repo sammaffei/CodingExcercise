@@ -12,7 +12,6 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *const MyFirstConstant;
-extern NSString *const MySecondConstant;
+extern NSString *const cAppRestURLStr;
 
 #endif

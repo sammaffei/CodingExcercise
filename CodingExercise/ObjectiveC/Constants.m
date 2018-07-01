@@ -8,5 +8,4 @@
 
 #import "Constants.h"
 
-NSString *const MyFirstConstant = @"FirstConstant";
-NSString *const MySecondConstant = @"SecondConstant";
+NSString *const cAppRestURLStr = @"http://api.duckduckgo.com/?q=simpsons+characters&format=json";

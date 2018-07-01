@@ -7,16 +7,19 @@
 //
 
 #import "DataMgr.h"
+#import "Constants.h"
 
 @implementation ItemData
 
 NSString* parsedTitle = nil;
+NSArray* dataModelArray = nil;
 
 -(id)initWithDict:(NSDictionary *)dataDict
     {
     if ( self = [super init] )
         {
         _savedDataDict = dataDict;
+        dataModelArray = [[NSArray alloc] init];
         }
         
     return self;
@@ -73,7 +76,37 @@ NSString* parsedTitle = nil;
 
 - (void)fetchJSONData
     {
-    
+    NSURL *appURL = [NSURL URLWithString:cAppRestURLStr];
+        
+    if (appURL == nil)
+        return;
+        
+    [NSURLSession.sharedSession dataTaskWithURL:appURL
+                              completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response,
+                                                  NSError * _Nullable error)
+        {
+        if (error != nil)
+            {
+            return;
+            }
+        
+        if (data != nil)
+            {
+            NSError *err = nil;
+            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: data options: 0 error: &err];
+
+            }
+        
+        }];
+    }
+
+- (void)dealloc
+    {
+    if (dataModelArray != nil)
+        dataModelArray = nil;
+        
+    if (parsedTitle != nil)
+        parsedTitle = nil;
     }
 
 @end
