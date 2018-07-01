@@ -13,5 +13,6 @@
 #import <Foundation/Foundation.h>
 
 extern NSString *const cAppRestURLStr;
+extern NSString *const cDataTitleStr;
 
 #endif
