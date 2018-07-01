@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import MBProgressHUD
 
 class MasterCollectionViewController : UICollectionViewController, UICollectionViewDelegateFlowLayout
     {
