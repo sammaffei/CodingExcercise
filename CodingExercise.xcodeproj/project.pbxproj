@@ -12,6 +12,8 @@
 		4B1034E220D8776C00E77708 /* Consants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1034E120D8776C00E77708 /* Consants.swift */; };
 		4B1034E320D8776C00E77708 /* Consants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1034E120D8776C00E77708 /* Consants.swift */; };
 		4B1CEDBC20E91FE200220669 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CEDBB20E91FE200220669 /* Constants.m */; };
+		4B1CEDBF20E92E7700220669 /* MasterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CEDBE20E92E7700220669 /* MasterCollectionViewController.m */; };
+		4B1CEDC220E9340400220669 /* MasterCollectionCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CEDC120E9340400220669 /* MasterCollectionCells.m */; };
 		4B383F0A20D8A64200708F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
 		4B383F0B20D8A64300708F6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
 		4B3AC40E20D96E7D0062D12B /* MasterCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */; };
@@ -49,6 +51,10 @@
 		4B1034E120D8776C00E77708 /* Consants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Consants.swift; sourceTree = "<group>"; };
 		4B1CEDBB20E91FE200220669 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		4B1CEDBD20E9201C00220669 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		4B1CEDBE20E92E7700220669 /* MasterCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterCollectionViewController.m; sourceTree = "<group>"; };
+		4B1CEDC020E92F7600220669 /* MasterCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterCollectionViewController.h; sourceTree = "<group>"; };
+		4B1CEDC120E9340400220669 /* MasterCollectionCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterCollectionCells.m; sourceTree = "<group>"; };
+		4B1CEDC320E9343200220669 /* MasterCollectionCells.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterCollectionCells.h; sourceTree = "<group>"; };
 		4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCollectionViewController.swift; sourceTree = "<group>"; };
 		4B3AC41020D97B140062D12B /* MasterCollectionCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCollectionCells.swift; sourceTree = "<group>"; };
 		4B4BA49A20E13483004042C1 /* DataMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMgr.swift; sourceTree = "<group>"; };
@@ -142,6 +148,10 @@
 				4BFAC5F620E84BAF00CC331C /* DetailViewController.m */,
 				4BFAC5F720E84BAF00CC331C /* MasterViewController.h */,
 				4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */,
+				4B1CEDC020E92F7600220669 /* MasterCollectionViewController.h */,
+				4B1CEDBE20E92E7700220669 /* MasterCollectionViewController.m */,
+				4B1CEDC320E9343200220669 /* MasterCollectionCells.h */,
+				4B1CEDC120E9340400220669 /* MasterCollectionCells.m */,
 				4BFAC5F820E84BAF00CC331C /* main.m */,
 			);
 			path = ObjectiveC;
@@ -405,6 +415,8 @@
 				4BFAC60120E84BAF00CC331C /* MasterViewController.m in Sources */,
 				4BFAC5FE20E84BAF00CC331C /* main.m in Sources */,
 				4BFAC5FF20E84BAF00CC331C /* AppDelegate.m in Sources */,
+				4B1CEDC220E9340400220669 /* MasterCollectionCells.m in Sources */,
+				4B1CEDBF20E92E7700220669 /* MasterCollectionViewController.m in Sources */,
 				4B1CEDBC20E91FE200220669 /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
