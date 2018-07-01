@@ -22,6 +22,9 @@
     UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
+    
+    // DataMgr.sharedInstance.fetchJSONData(errorProc: nil)    // do inital data fetch
+    
     return YES;
 }
 

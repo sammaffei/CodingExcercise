@@ -21,6 +21,7 @@
 		4B4BA49C20E13483004042C1 /* DataMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BA49A20E13483004042C1 /* DataMgr.swift */; };
 		4B85209C20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4B85209D20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
+		4BADCCCB20E85C3C008DFD2C /* DataMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BADCCCA20E85C3C008DFD2C /* DataMgr.m */; };
 		4BFAC5FD20E84BAF00CC331C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F620E84BAF00CC331C /* DetailViewController.m */; };
 		4BFAC5FE20E84BAF00CC331C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F820E84BAF00CC331C /* main.m */; };
 		4BFAC5FF20E84BAF00CC331C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F920E84BAF00CC331C /* AppDelegate.m */; };
@@ -51,6 +52,8 @@
 		4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SimpsonsViewer.plist; sourceTree = SOURCE_ROOT; };
 		4B85209B20D951B9003C447B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		4BADCCC920E854B0008DFD2C /* ObjCBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCBridgingHeader.h; sourceTree = "<group>"; };
+		4BADCCCA20E85C3C008DFD2C /* DataMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataMgr.m; sourceTree = "<group>"; };
+		4BADCCCC20E85E6C008DFD2C /* DataMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataMgr.h; sourceTree = "<group>"; };
 		4BFAC5DA20E84A9400CC331C /* SimpsonsViewerOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsViewerOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFAC5F520E84BAF00CC331C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BFAC5F620E84BAF00CC331C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -121,13 +124,15 @@
 		4BFAC5F420E84BAF00CC331C /* ObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				4BADCCCC20E85E6C008DFD2C /* DataMgr.h */,
+				4BADCCCA20E85C3C008DFD2C /* DataMgr.m */,
 				4BFAC5F520E84BAF00CC331C /* AppDelegate.h */,
+				4BFAC5FC20E84BAF00CC331C /* DetailViewController.h */,
 				4BFAC5F620E84BAF00CC331C /* DetailViewController.m */,
 				4BFAC5F720E84BAF00CC331C /* MasterViewController.h */,
+				4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */,
 				4BFAC5F820E84BAF00CC331C /* main.m */,
 				4BFAC5F920E84BAF00CC331C /* AppDelegate.m */,
-				4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */,
-				4BFAC5FC20E84BAF00CC331C /* DetailViewController.h */,
 			);
 			path = ObjectiveC;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BFAC5FD20E84BAF00CC331C /* DetailViewController.m in Sources */,
+				4BADCCCB20E85C3C008DFD2C /* DataMgr.m in Sources */,
 				4BFAC60120E84BAF00CC331C /* MasterViewController.m in Sources */,
 				4BFAC5FE20E84BAF00CC331C /* main.m in Sources */,
 				4BFAC5FF20E84BAF00CC331C /* AppDelegate.m in Sources */,
