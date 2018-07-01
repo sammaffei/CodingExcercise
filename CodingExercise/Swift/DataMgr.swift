@@ -3,7 +3,7 @@
 //  CodingExercise
 //
 //  Created by Samuel Maffei on 6/25/18.
-//  Copyright © 2018 xfinity. All rights reserved.
+//  Copyright © 2018 sammaffei. All rights reserved.
 //
 //  Class for hadning data retrieval in the data nodel for later access
 //  Data model uses KVO to signal changes to observaers

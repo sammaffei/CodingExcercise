@@ -3,7 +3,7 @@
 //  SimpsonsViewerOC
 //
 //  Created by Samuel Maffei on 6/30/18.
-//  Copyright © 2018 xfinity. All rights reserved.
+//  Copyright © 2018 sammaffei. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -23,7 +23,7 @@
     navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
     splitViewController.delegate = self;
     
-    // DataMgr.sharedInstance.fetchJSONData(errorProc: nil)    // do inital data fetch
+    [DataMgr.sharedInstance fetchJSONData];
     
     return YES;
 }
