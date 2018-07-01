@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DataMgr.h"
 
 @interface DetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
-@property (weak, nonatomic) NSObject *detailItem;
+@property (weak, nonatomic) ItemData *detailItem;
 
 @end
 

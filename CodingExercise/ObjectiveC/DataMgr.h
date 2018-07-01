@@ -8,9 +8,21 @@
 
 #import <UIKit/UIKit.h>
 
+@interface ItemData : NSObject
+
+    -(id)initWithDict:(NSDictionary *)dataDict;
+
+    @property (nonatomic, readonly) NSString* title;
+    @property (nonatomic, readonly) NSString* description;
+    @property (nonatomic, readonly) NSURL* imageURL;
+
+    @property (strong, nonatomic) NSDictionary* savedDataDict;
+
+@end
+
 @interface DataMgr : NSObject
 
-+ (instancetype)sharedInstance;
+    + (instancetype)sharedInstance;
 
 @end
 
