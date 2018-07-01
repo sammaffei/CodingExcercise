@@ -5,6 +5,8 @@ platform :ios, '9.0'
 
 # use_frameworks!
 
+# Swift targets
+
 target 'SimpsonsViewer' do
 
 	pod 'SDWebImage'
@@ -13,6 +15,15 @@ target 'SimpsonsViewer' do
 end
 
 target 'WireViewer' do
+
+	pod 'SDWebImage'
+	pod 'MBProgressHUD'
+
+end
+
+# Objective C Targets
+
+target 'SimpsonsViewerOC' do
 
 	pod 'SDWebImage'
 	pod 'MBProgressHUD'
