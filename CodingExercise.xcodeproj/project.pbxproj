@@ -25,12 +25,12 @@
 		4B85209C20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4B85209D20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4BADCCCB20E85C3C008DFD2C /* DataMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BADCCCA20E85C3C008DFD2C /* DataMgr.m */; };
+		4BEB76D520E952A8006325CF /* MainOC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB76D320E952A8006325CF /* MainOC.storyboard */; };
 		4BFAC5FD20E84BAF00CC331C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F620E84BAF00CC331C /* DetailViewController.m */; };
 		4BFAC5FE20E84BAF00CC331C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F820E84BAF00CC331C /* main.m */; };
 		4BFAC5FF20E84BAF00CC331C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F920E84BAF00CC331C /* AppDelegate.m */; };
 		4BFAC60020E84BAF00CC331C /* SimpsonsViewerOC.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */; };
 		4BFAC60120E84BAF00CC331C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */; };
-		4BFAC60220E84C1E00CC331C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB764D20D86CAE00F44CF8 /* Main.storyboard */; };
 		4BFAC60320E84C2200CC331C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
 		4BFAC60420E84C2600CC331C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */; };
 		4BFAC60520E84C2E00CC331C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB768C20D8703600F44CF8 /* Default-568h@2x.png */; };
@@ -64,6 +64,7 @@
 		4BADCCC920E854B0008DFD2C /* ObjCBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCBridgingHeader.h; sourceTree = "<group>"; };
 		4BADCCCA20E85C3C008DFD2C /* DataMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataMgr.m; sourceTree = "<group>"; };
 		4BADCCCC20E85E6C008DFD2C /* DataMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataMgr.h; sourceTree = "<group>"; };
+		4BEB76D420E952A8006325CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainOC.storyboard; sourceTree = "<group>"; };
 		4BFAC5DA20E84A9400CC331C /* SimpsonsViewerOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsViewerOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFAC5F520E84BAF00CC331C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4BFAC5F620E84BAF00CC331C /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
@@ -183,9 +184,10 @@
 			children = (
 				4BFAC5F420E84BAF00CC331C /* ObjectiveC */,
 				4BFAC5B020E847FC00CC331C /* Swift */,
-				4BFB764D20D86CAE00F44CF8 /* Main.storyboard */,
-				4BFB765020D86CAF00F44CF8 /* Assets.xcassets */,
 				4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */,
+				4BFB764D20D86CAE00F44CF8 /* Main.storyboard */,
+				4BEB76D320E952A8006325CF /* MainOC.storyboard */,
+				4BFB765020D86CAF00F44CF8 /* Assets.xcassets */,
 				4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */,
 				4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */,
 				4B5B2E7C20D872280008050C /* WireViewer.plist */,
@@ -320,7 +322,7 @@
 				4BFAC60420E84C2600CC331C /* LaunchScreen.storyboard in Resources */,
 				4BFAC60320E84C2200CC331C /* Assets.xcassets in Resources */,
 				4BFAC60520E84C2E00CC331C /* Default-568h@2x.png in Resources */,
-				4BFAC60220E84C1E00CC331C /* Main.storyboard in Resources */,
+				4BEB76D520E952A8006325CF /* MainOC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +454,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		4BEB76D320E952A8006325CF /* MainOC.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4BEB76D420E952A8006325CF /* Base */,
+			);
+			name = MainOC.storyboard;
+			sourceTree = "<group>";
+		};
 		4BFB764D20D86CAE00F44CF8 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
