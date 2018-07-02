@@ -168,6 +168,9 @@
                     <navigationItem key="navigationItem" id="KHO-gH-CbF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="U01-7O-hwk"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="modeSelectorHeightConstraint" destination="qSo-RC-gRZ" id="LP3-8b-glu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVL-dN-baf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

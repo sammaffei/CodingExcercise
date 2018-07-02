@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "MasterCollectionViewController.h"
 #import "DetailViewController.h"
+#import "Constants.h"
 
 @interface MasterViewController ()
 
@@ -21,10 +22,23 @@
 
 CGFloat defaultModeSelectorHeight = 0.0;
 
+- (IBAction)performModeSwitch:(UISegmentedControl *)sender
+    {
+    if (_childCollectionVC != nil)
+        {
+        
+        }
+    }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    if (_modeSelectorHeightConstraint != nil)
+        {
+        defaultModeSelectorHeight = _modeSelectorHeightConstraint.constant;
+        }
+    
+    self.title = cDataTitleStr;
 }
 
 
