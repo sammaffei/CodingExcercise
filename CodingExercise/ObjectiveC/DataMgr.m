@@ -74,6 +74,11 @@ NSArray* dataModelArray = nil;
     return sharedInstance;
     }
 
+-(void)buildTableData:(NSArray *)topicsArray
+    {
+    
+    }
+
 - (void)fetchJSONData
     {
     NSURL *appURL = [NSURL URLWithString:cAppRestURLStr];
@@ -81,9 +86,8 @@ NSArray* dataModelArray = nil;
     if (appURL == nil)
         return;
         
-    [NSURLSession.sharedSession dataTaskWithURL:appURL
-                              completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response,
-                                                  NSError * _Nullable error)
+    NSURLSessionDataTask *fetchTask = [NSURLSession.sharedSession dataTaskWithURL:appURL
+                                          completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error)
         {
         if (error != nil)
             {
@@ -93,11 +97,22 @@ NSArray* dataModelArray = nil;
         if (data != nil)
             {
             NSError *err = nil;
-            NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData: data options: 0 error: &err];
+            NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData: data options: 0 error: &err];
 
+            if ((dataDict == nil) || (![dataDict isKindOfClass:[NSDictionary class]]))
+                return;
+                  
+            NSArray *dataItemsArray = [dataDict valueForKey:@"RelatedTopics"];
+                                        
+            if ((dataItemsArray == nil) || (![dataItemsArray isKindOfClass:[NSArray class]]))
+                return;
+
+            [self buildTableData:dataItemsArray];
             }
         
         }];
+        
+    [fetchTask resume];
     }
 
 - (void)dealloc
