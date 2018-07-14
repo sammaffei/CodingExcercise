@@ -13,7 +13,7 @@
 
 @required
 
--(NSString *)cellIndentifier;
++(NSString *)cellIndentifier;
 
 -(void)setData:(ItemData *)inData;
 
@@ -34,7 +34,7 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
 
--(NSString *)cellIndentifier;
++(NSString *)cellIndentifier;
 
 -(void)setData:(ItemData *)inData;
 
@@ -46,7 +46,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
--(NSString *)cellIndentifier;
++(NSString *)cellIndentifier;
 
 -(void)setData:(ItemData *)inData;
 

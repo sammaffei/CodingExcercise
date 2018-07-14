@@ -12,45 +12,56 @@
 @implementation ItemData
 
 NSString* parsedTitle = nil;
-NSArray* dataModelArray = nil;
+NSString* parseDescription = nil;
 
 -(id)initWithDict:(NSDictionary *)dataDict
     {
     if ( self = [super init] )
         {
         _savedDataDict = dataDict;
-        dataModelArray = [[NSArray alloc] init];
         }
         
     return self;
     }
 
+-(void)parseTitleDescription
+    {
+    if (parsedTitle != nil)     // parsed data already, bail
+        return;
+        
+    NSString *fullText = [_savedDataDict objectForKey:@"Text"];
+        
+    parsedTitle = NSLocalizedString(@"?Title?", nil);
+    parseDescription = NSLocalizedString(@"?Description?", nil);
+        
+    if ((fullText == nil) || (fullText.length < 1))
+        {
+        return;
+        }
+        
+    NSArray *brokenTextItems = [fullText componentsSeparatedByString:@" - "];
+        
+    if (brokenTextItems.count > 0)
+        {
+        parsedTitle = brokenTextItems[0];
+            
+        if (brokenTextItems.count > 1)
+            parseDescription = brokenTextItems[1];
+        }
+    }
+
 -(NSString *)title
     {
-    if (parsedTitle == nil)
-        {
-        NSString *descStr = self.description;
-            
-        if (descStr != nil)
-            {
-            NSArray *items = [descStr componentsSeparatedByString:@" - "];
-                
-            if (items.count > 0)
-                {
-                parsedTitle = items[0];
-                }
-            }
-        }
+    [self parseTitleDescription];
         
     return parsedTitle;
     }
 
 -(NSString *)description
     {
-    if (_savedDataDict == nil)
-        return nil;
+    [self parseTitleDescription];
     
-    return [_savedDataDict objectForKey:@"Text"];
+    return parseDescription;
     }
 
 -(NSURL *)imageURL
@@ -63,6 +74,11 @@ NSArray* dataModelArray = nil;
 
 @implementation DataMgr
 
+
+NSMutableArray* dataModelArray = nil;
+
+NSMutableArray* observerArray = nil;
+
 + (instancetype)sharedInstance
     {
     static DataMgr *sharedInstance = nil;
@@ -74,8 +90,46 @@ NSArray* dataModelArray = nil;
     return sharedInstance;
     }
 
+-(id)init
+    {
+    if ( self = [super init] )
+        {
+        dataModelArray = [[NSMutableArray alloc] init];
+            
+        NSAssert(dataModelArray != nil, @"Fatal Error : Couldn't allocate data manager.");
+            
+        observerArray = [[NSMutableArray alloc] init];
+            
+        NSAssert(observerArray != nil, @"Fatal Error : Couldn't allocate observerArray.");
+        }
+        
+    return self;
+    }
+
+
 -(void)buildTableData:(NSArray *)topicsArray
     {
+    if (topicsArray == nil)
+        return;
+        
+    [dataModelArray removeAllObjects];
+        
+    for (NSDictionary* dataDict in topicsArray)
+        {
+        if (![dataDict isKindOfClass:[NSDictionary class]])
+            continue;
+            
+        ItemData *newItemData = [[ItemData alloc] initWithDict:dataDict];
+            
+        if (newItemData != nil)
+            [dataModelArray addObject:newItemData];
+        }
+        
+    // Execute on main thread because callers don't know this is the result of an asynch network thread.
+        
+    dispatch_async(dispatch_get_main_queue(), ^{
+            self.modelLastUpdated = [NSDate date];
+        });
     
     }
 
@@ -115,13 +169,35 @@ NSArray* dataModelArray = nil;
     [fetchTask resume];
     }
 
-- (void)dealloc
+-(void)addDataModelObserver:(NSObject *)observer
+    {
+    [observerArray addObject:observer];
+        
+    NSString *keyPath = NSStringFromSelector(@selector(modelLastUpdated));
+        
+    [self addObserver:observer forKeyPath:keyPath options:0 context:nil];
+    }
+
+-(NSUInteger)numDataItems
     {
     if (dataModelArray != nil)
-        dataModelArray = nil;
+        return [dataModelArray count];
         
-    if (parsedTitle != nil)
-        parsedTitle = nil;
+    return 0;
+    }
+
+-(ItemData *)nthItem:(NSUInteger)nth
+    {
+     if ((dataModelArray != nil) && (nth < [dataModelArray count]))
+         return [dataModelArray objectAtIndex:nth];
+        
+    return nil;
+    }
+
+- (void)dealloc
+    {
+    dataModelArray = nil;
+    observerArray = nil;
     }
 
 @end

@@ -15,4 +15,6 @@
 extern NSString *const cAppRestURLStr;
 extern NSString *const cDataTitleStr;
 
+extern NSString *const cModelLastUpdatedKeyPath;
+
 #endif

@@ -22,9 +22,17 @@
 
 @interface DataMgr : NSObject
 
+    @property(strong) NSDate *modelLastUpdated;
+
     + (instancetype)sharedInstance;
 
     - (void)fetchJSONData;
+
+    -(void)addDataModelObserver:(NSObject *)observer;
+
+    -(NSUInteger)numDataItems;
+
+    -(ItemData *)nthItem:(NSUInteger)nth;
 
 @end
 

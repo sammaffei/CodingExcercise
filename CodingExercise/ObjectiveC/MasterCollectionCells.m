@@ -19,7 +19,7 @@
 
 @implementation TextOnlyColCell
 
--(NSString *)cellIndentifier
++(NSString *)cellIndentifier
     {
     return @"TextOnlyCell";
     }
@@ -35,7 +35,7 @@
 
 @implementation IconColCell
 
--(NSString *)cellIndentifier
++(NSString *)cellIndentifier
     {
     return @"IconCell";
     }
