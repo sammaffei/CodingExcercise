@@ -66,11 +66,11 @@ static NSArray *cellIDStrs;
     {
     switch (self.curColMode)
         {
-        case iconMode:
+        case textOnlyMode:
             return CGSizeMake(collectionView.frame.size.width, 40);
                 
         default:
-        case textOnlyMode:
+        case iconMode:
             {
             CGFloat side = (collectionView.frame.size.width / 2) - 5;
                 
@@ -83,11 +83,13 @@ static NSArray *cellIDStrs;
     {
     UICollectionViewCell<SetDataProtocol> *dataCell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIDStrs[self.curColMode]
                                                                                                 forIndexPath:indexPath];
-    ItemData    *iData = [DataMgr.sharedInstance nthItem:indexPath.row];
+    ItemData    *iData = [DataMgr.sharedInstance nthItem:indexPath.item];
         
     if ((iData != nil) && (dataCell != nil))
         {
         [dataCell setData:iData];
+            
+        return dataCell;
         }
         
     return nil;

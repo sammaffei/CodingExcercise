@@ -191,7 +191,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="IconCell" id="Ys4-4o-dUv" userLabel="Icon View Cell" customClass="IconColCell" customModule="SimpsonsViewerOC" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="IconCell" id="Ys4-4o-dUv" userLabel="Icon View Cell" customClass="IconColCell">
                                 <rect key="frame" x="132" y="0.0" width="150" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -236,7 +236,7 @@
                                     <segue destination="vC3-pB-5Vb" kind="showDetail" identifier="IconShowDetail" id="X97-Tg-Bow"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="TextOnlyCell" id="Ggf-02-CHB" userLabel="Text Only Cell" customClass="TextOnlyColCell" customModule="SimpsonsViewerOC" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="TextOnlyCell" id="Ggf-02-CHB" userLabel="Text Only Cell" customClass="TextOnlyColCell">
                                 <rect key="frame" x="19.666666666666668" y="160" width="375" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

@@ -10,14 +10,18 @@
 #import "Constants.h"
 
 @implementation ItemData
-
-NSString* parsedTitle = nil;
-NSString* parseDescription = nil;
+    {
+    NSString* parsedTitle;
+    NSString* parseDescription;
+    }
 
 -(id)initWithDict:(NSDictionary *)dataDict
     {
     if ( self = [super init] )
         {
+        parsedTitle = nil;
+        parseDescription = nil;
+            
         _savedDataDict = dataDict;
         }
         

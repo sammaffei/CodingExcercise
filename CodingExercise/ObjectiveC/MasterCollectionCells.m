@@ -26,7 +26,7 @@
 
 -(void)setData:(ItemData *)inData
     {
-    _textLabel.text = (inData == nil) ? nil : inData.description;
+    _textLabel.text = (inData == nil) ? nil : [inData title];
     }
 
 @end
