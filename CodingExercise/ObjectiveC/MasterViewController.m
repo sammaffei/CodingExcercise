@@ -26,7 +26,7 @@ CGFloat defaultModeSelectorHeight = 0.0;
     {
     if (_childCollectionVC != nil)
         {
-        
+        [_childCollectionVC setCurColMode:sender.selectedSegmentIndex];
         }
     }
 
@@ -90,14 +90,14 @@ CGFloat defaultModeSelectorHeight = 0.0;
 #pragma mark - Segues
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
+    {
     // use embed to store MasterCollectionViewController
     
     if ([segue.identifier isEqualToString:@"CollectionEmbedSegue"])
-    {
+        {
         _childCollectionVC = (MasterCollectionViewController *) segue.destinationViewController;
+        }
     }
-}
 
 
 

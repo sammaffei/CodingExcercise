@@ -81,9 +81,8 @@
             
         NSString *urlStr = [iconDict objectForKey:@"URL"];
         
-        if ((urlStr == nil) || (![urlStr isKindOfClass:[NSString class]]))
+        if ((urlStr == nil) || (![urlStr isKindOfClass:[NSString class]]) || (urlStr.length < 1))
             return nil;
-            
 
         createdURL = [NSURL URLWithString:urlStr];
         }
