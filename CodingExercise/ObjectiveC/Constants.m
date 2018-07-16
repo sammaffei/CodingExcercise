@@ -8,8 +8,13 @@
 
 #import "Constants.h"
 
+#if OBJCAPP==SIMPSONSVIEWERAPP
+
 NSString *const cAppRestURLStr = @"http://api.duckduckgo.com/?q=simpsons+characters&format=json";
 NSString *const cDataTitleStr = @"Simpsons Character Viewer";
 
 NSString *const cModelLastUpdatedKeyPath = @"modelLastUpdated";
 
+#elif OBJCAPP==WIREVIEWERAPP
+
+#endif

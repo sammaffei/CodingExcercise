@@ -30,4 +30,11 @@ target 'SimpsonsViewerOC' do
 
 end
 
+target 'WireViewerOC' do
+
+	pod 'SDWebImage'
+	pod 'MBProgressHUD'
+
+end
+
 

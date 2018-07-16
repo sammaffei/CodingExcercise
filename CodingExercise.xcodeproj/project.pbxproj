@@ -24,12 +24,28 @@
 		4B4BA49C20E13483004042C1 /* DataMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BA49A20E13483004042C1 /* DataMgr.swift */; };
 		4B85209C20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4B85209D20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
+		4B976A7B20FD1A0300D56468 /* WireViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7720FD1A0200D56468 /* WireViewer-Info.plist */; };
+		4B976A7C20FD1A0300D56468 /* SimpsonsViewerOC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7820FD1A0200D56468 /* SimpsonsViewerOC-Info.plist */; };
+		4B976A7D20FD1A0300D56468 /* SimpsonsViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7920FD1A0200D56468 /* SimpsonsViewer-Info.plist */; };
+		4B976A7E20FD1A0300D56468 /* WireViewerOC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7A20FD1A0300D56468 /* WireViewerOC-Info.plist */; };
 		4BADCCCB20E85C3C008DFD2C /* DataMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BADCCCA20E85C3C008DFD2C /* DataMgr.m */; };
+		4BCB4A6720FD16DA00C53572 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F620E84BAF00CC331C /* DetailViewController.m */; };
+		4BCB4A6820FD16DA00C53572 /* DataMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BADCCCA20E85C3C008DFD2C /* DataMgr.m */; };
+		4BCB4A6920FD16DA00C53572 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */; };
+		4BCB4A6A20FD16DA00C53572 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F820E84BAF00CC331C /* main.m */; };
+		4BCB4A6B20FD16DA00C53572 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F920E84BAF00CC331C /* AppDelegate.m */; };
+		4BCB4A6C20FD16DA00C53572 /* MasterCollectionCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CEDC120E9340400220669 /* MasterCollectionCells.m */; };
+		4BCB4A6D20FD16DA00C53572 /* MasterCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CEDBE20E92E7700220669 /* MasterCollectionViewController.m */; };
+		4BCB4A6E20FD16DA00C53572 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B1CEDBB20E91FE200220669 /* Constants.m */; };
+		4BCB4A7020FD16DA00C53572 /* libPods-SimpsonsViewerOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A30305886FA9E302C3B2C29C /* libPods-SimpsonsViewerOC.a */; };
+		4BCB4A7320FD16DA00C53572 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */; };
+		4BCB4A7420FD16DA00C53572 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
+		4BCB4A7520FD16DA00C53572 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB768C20D8703600F44CF8 /* Default-568h@2x.png */; };
+		4BCB4A7620FD16DA00C53572 /* MainOC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB76D320E952A8006325CF /* MainOC.storyboard */; };
 		4BEB76D520E952A8006325CF /* MainOC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BEB76D320E952A8006325CF /* MainOC.storyboard */; };
 		4BFAC5FD20E84BAF00CC331C /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F620E84BAF00CC331C /* DetailViewController.m */; };
 		4BFAC5FE20E84BAF00CC331C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F820E84BAF00CC331C /* main.m */; };
 		4BFAC5FF20E84BAF00CC331C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F920E84BAF00CC331C /* AppDelegate.m */; };
-		4BFAC60020E84BAF00CC331C /* SimpsonsViewerOC.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */; };
 		4BFAC60120E84BAF00CC331C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */; };
 		4BFAC60320E84C2200CC331C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765020D86CAF00F44CF8 /* Assets.xcassets */; };
 		4BFAC60420E84C2600CC331C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */; };
@@ -58,12 +74,15 @@
 		4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCollectionViewController.swift; sourceTree = "<group>"; };
 		4B3AC41020D97B140062D12B /* MasterCollectionCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterCollectionCells.swift; sourceTree = "<group>"; };
 		4B4BA49A20E13483004042C1 /* DataMgr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMgr.swift; sourceTree = "<group>"; };
-		4B5B2E7C20D872280008050C /* WireViewer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = WireViewer.plist; sourceTree = SOURCE_ROOT; };
-		4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = SimpsonsViewer.plist; sourceTree = SOURCE_ROOT; };
 		4B85209B20D951B9003C447B /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		4B976A7720FD1A0200D56468 /* WireViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WireViewer-Info.plist"; path = "Info.plists/WireViewer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4B976A7820FD1A0200D56468 /* SimpsonsViewerOC-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SimpsonsViewerOC-Info.plist"; path = "Info.plists/SimpsonsViewerOC-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4B976A7920FD1A0200D56468 /* SimpsonsViewer-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SimpsonsViewer-Info.plist"; path = "Info.plists/SimpsonsViewer-Info.plist"; sourceTree = SOURCE_ROOT; };
+		4B976A7A20FD1A0300D56468 /* WireViewerOC-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "WireViewerOC-Info.plist"; path = "Info.plists/WireViewerOC-Info.plist"; sourceTree = SOURCE_ROOT; };
 		4BADCCC920E854B0008DFD2C /* ObjCBridgingHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCBridgingHeader.h; sourceTree = "<group>"; };
 		4BADCCCA20E85C3C008DFD2C /* DataMgr.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataMgr.m; sourceTree = "<group>"; };
 		4BADCCCC20E85E6C008DFD2C /* DataMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataMgr.h; sourceTree = "<group>"; };
+		4BCB4A7A20FD16DA00C53572 /* WireViewerOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WireViewerOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BEB76D420E952A8006325CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainOC.storyboard; sourceTree = "<group>"; };
 		4BFAC5DA20E84A9400CC331C /* SimpsonsViewerOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpsonsViewerOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BFAC5F520E84BAF00CC331C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,7 +90,6 @@
 		4BFAC5F720E84BAF00CC331C /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		4BFAC5F820E84BAF00CC331C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4BFAC5F920E84BAF00CC331C /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SimpsonsViewerOC.plist; sourceTree = "<group>"; };
 		4BFAC5FB20E84BAF00CC331C /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		4BFAC5FC20E84BAF00CC331C /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		4BFB764720D86CAE00F44CF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +112,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4BCB4A6F20FD16DA00C53572 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCB4A7020FD16DA00C53572 /* libPods-SimpsonsViewerOC.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BFAC5D720E84A9400CC331C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +201,7 @@
 				4BFB765F20D86CEF00F44CF8 /* SimpsonsViewer.app */,
 				4BFB768020D86D4700F44CF8 /* WireViewer.app */,
 				4BFAC5DA20E84A9400CC331C /* SimpsonsViewerOC.app */,
+				4BCB4A7A20FD16DA00C53572 /* WireViewerOC.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,10 +214,11 @@
 				4BFB765220D86CAF00F44CF8 /* LaunchScreen.storyboard */,
 				4BFB764D20D86CAE00F44CF8 /* Main.storyboard */,
 				4BEB76D320E952A8006325CF /* MainOC.storyboard */,
+				4B976A7920FD1A0200D56468 /* SimpsonsViewer-Info.plist */,
+				4B976A7720FD1A0200D56468 /* WireViewer-Info.plist */,
+				4B976A7820FD1A0200D56468 /* SimpsonsViewerOC-Info.plist */,
+				4B976A7A20FD1A0300D56468 /* WireViewerOC-Info.plist */,
 				4BFB765020D86CAF00F44CF8 /* Assets.xcassets */,
-				4BFAC5FA20E84BAF00CC331C /* SimpsonsViewerOC.plist */,
-				4B5B2E7D20D872280008050C /* SimpsonsViewer.plist */,
-				4B5B2E7C20D872280008050C /* WireViewer.plist */,
 			);
 			path = CodingExercise;
 			sourceTree = "<group>";
@@ -221,6 +249,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4BCB4A6420FD16DA00C53572 /* WireViewerOC */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4BCB4A7720FD16DA00C53572 /* Build configuration list for PBXNativeTarget "WireViewerOC" */;
+			buildPhases = (
+				4BCB4A6520FD16DA00C53572 /* [CP] Check Pods Manifest.lock */,
+				4BCB4A6620FD16DA00C53572 /* Sources */,
+				4BCB4A6F20FD16DA00C53572 /* Frameworks */,
+				4BCB4A7120FD16DA00C53572 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WireViewerOC;
+			productName = SimpsonsViewerOC;
+			productReference = 4BCB4A7A20FD16DA00C53572 /* WireViewerOC.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4BFAC5D920E84A9400CC331C /* SimpsonsViewerOC */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4BFAC5F020E84A9500CC331C /* Build configuration list for PBXNativeTarget "SimpsonsViewerOC" */;
@@ -309,16 +355,27 @@
 				4BFB765E20D86CEF00F44CF8 /* SimpsonsViewer */,
 				4BFB767320D86D4700F44CF8 /* WireViewer */,
 				4BFAC5D920E84A9400CC331C /* SimpsonsViewerOC */,
+				4BCB4A6420FD16DA00C53572 /* WireViewerOC */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4BCB4A7120FD16DA00C53572 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCB4A7320FD16DA00C53572 /* LaunchScreen.storyboard in Resources */,
+				4BCB4A7420FD16DA00C53572 /* Assets.xcassets in Resources */,
+				4BCB4A7520FD16DA00C53572 /* Default-568h@2x.png in Resources */,
+				4BCB4A7620FD16DA00C53572 /* MainOC.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BFAC5D820E84A9400CC331C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4BFAC60020E84BAF00CC331C /* SimpsonsViewerOC.plist in Resources */,
 				4BFAC60420E84C2600CC331C /* LaunchScreen.storyboard in Resources */,
 				4BFAC60320E84C2200CC331C /* Assets.xcassets in Resources */,
 				4BFAC60520E84C2E00CC331C /* Default-568h@2x.png in Resources */,
@@ -330,9 +387,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B976A7C20FD1A0300D56468 /* SimpsonsViewerOC-Info.plist in Resources */,
 				4BFB768A20D86F3F00F44CF8 /* LaunchScreen.storyboard in Resources */,
 				4BFB768820D86F2900F44CF8 /* Main.storyboard in Resources */,
 				4B383F0A20D8A64200708F6F /* Assets.xcassets in Resources */,
+				4B976A7B20FD1A0300D56468 /* WireViewer-Info.plist in Resources */,
+				4B976A7E20FD1A0300D56468 /* WireViewerOC-Info.plist in Resources */,
+				4B976A7D20FD1A0300D56468 /* SimpsonsViewer-Info.plist in Resources */,
 				4BFB768D20D8703600F44CF8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +412,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4BCB4A6520FD16DA00C53572 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SimpsonsViewerOC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		78BB3504124E74E7D3993664 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,6 +487,21 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4BCB4A6620FD16DA00C53572 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BCB4A6720FD16DA00C53572 /* DetailViewController.m in Sources */,
+				4BCB4A6820FD16DA00C53572 /* DataMgr.m in Sources */,
+				4BCB4A6920FD16DA00C53572 /* MasterViewController.m in Sources */,
+				4BCB4A6A20FD16DA00C53572 /* main.m in Sources */,
+				4BCB4A6B20FD16DA00C53572 /* AppDelegate.m in Sources */,
+				4BCB4A6C20FD16DA00C53572 /* MasterCollectionCells.m in Sources */,
+				4BCB4A6D20FD16DA00C53572 /* MasterCollectionViewController.m in Sources */,
+				4BCB4A6E20FD16DA00C53572 /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4BFAC5D620E84A9400CC331C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -481,6 +575,52 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4BCB4A7820FD16DA00C53572 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A742D851B5223D82F0E0F63 /* Pods-SimpsonsViewerOC.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BB7XDTTD86;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"OBJCAPP=SIMPSONSVIEWERAPP",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewerOC-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei.WireViewerOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4BCB4A7920FD16DA00C53572 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB7CD5F299E65A8947734AE8 /* Pods-SimpsonsViewerOC.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BB7XDTTD86;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"OBJCAPP=SIMPSONSVIEWERAPP",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewerOC-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei.WireViewerOC;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4BFAC5F120E84A9500CC331C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8A742D851B5223D82F0E0F63 /* Pods-SimpsonsViewerOC.debug.xcconfig */;
@@ -488,12 +628,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
-				INFOPLIST_FILE = "$(SRCROOT)/CodingExercise/SimpsonsViewerOC.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"OBJCAPP=SIMPSONSVIEWERAPP",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewerOC-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei..SimpsonsViewerOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei.SimpsonsViewerOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -506,12 +651,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
-				INFOPLIST_FILE = "$(SRCROOT)/CodingExercise/SimpsonsViewerOC.plist";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					"OBJCAPP=SIMPSONSVIEWERAPP",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewerOC-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei..SimpsonsViewerOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sammaffei.SimpsonsViewerOC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -638,7 +788,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
-				INFOPLIST_FILE = ./SimpsonsViewer.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewer-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -659,7 +809,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
-				INFOPLIST_FILE = ./SimpsonsViewer.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewer-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -680,7 +830,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
-				INFOPLIST_FILE = ./WireViewer.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewer-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -701,7 +851,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
-				INFOPLIST_FILE = ./WireViewer.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewer-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -718,6 +868,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4BCB4A7720FD16DA00C53572 /* Build configuration list for PBXNativeTarget "WireViewerOC" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BCB4A7820FD16DA00C53572 /* Debug */,
+				4BCB4A7920FD16DA00C53572 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4BFAC5F020E84A9500CC331C /* Build configuration list for PBXNativeTarget "SimpsonsViewerOC" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
