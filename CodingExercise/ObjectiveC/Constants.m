@@ -8,13 +8,17 @@
 
 #import "Constants.h"
 
-#if OBJCAPP==SIMPSONSVIEWERAPP
+#if SIMPSONSVIEWERAPP
 
 NSString *const cAppRestURLStr = @"http://api.duckduckgo.com/?q=simpsons+characters&format=json";
 NSString *const cDataTitleStr = @"Simpsons Character Viewer";
 
-NSString *const cModelLastUpdatedKeyPath = @"modelLastUpdated";
+#elif WIREVIEWERAPP
 
-#elif OBJCAPP==WIREVIEWERAPP
+NSString *const cAppRestURLStr = @"http://api.duckduckgo.com/?q=the+wire+characters&format=json";
+NSString *const cDataTitleStr = @"The Wire Character Viewer";
 
 #endif
+
+NSString *const cModelLastUpdatedKeyPath = @"modelLastUpdated";
+
