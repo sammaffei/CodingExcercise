@@ -159,10 +159,10 @@
 				4BFB764B20D86CAE00F44CF8 /* DetailViewController.swift */,
 				4B3AC41020D97B140062D12B /* MasterCollectionCells.swift */,
 				4B85209B20D951B9003C447B /* MasterViewController.swift */,
+				4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */,
 				4B1034E120D8776C00E77708 /* Consants.swift */,
 				4B4BA49A20E13483004042C1 /* DataMgr.swift */,
 				4BADCCC920E854B0008DFD2C /* ObjCBridgingHeader.h */,
-				4B3AC40D20D96E7D0062D12B /* MasterCollectionViewController.swift */,
 			);
 			path = Swift;
 			sourceTree = "<group>";

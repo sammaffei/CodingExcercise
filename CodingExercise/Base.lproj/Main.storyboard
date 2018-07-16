@@ -114,7 +114,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wpf-89-J1z">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Q4-8U6">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u1G-Q4-8U6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="46"/>
                                         <subviews>
                                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="X1f-Qe-zSL">
@@ -168,6 +168,9 @@
                     <navigationItem key="navigationItem" id="KHO-gH-CbF">
                         <barButtonItem key="backBarButtonItem" title="Back" id="U01-7O-hwk"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="modeSelectorHeightConstraint" destination="qSo-RC-gRZ" id="Uek-hk-VbD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVL-dN-baf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

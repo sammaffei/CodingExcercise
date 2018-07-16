@@ -22,20 +22,6 @@
 
 static NSArray *cellIDStrs;
 
-
-
-/*
- 
- var haveCompactWidth : Bool
- {
- get
- {
- return self.splitViewController!.traitCollection.horizontalSizeClass == .compact
- }
- }
- 
- */
-
 +(void)initialize
     {
     cellIDStrs = @[[TextOnlyColCell cellIndentifier],[IconColCell cellIndentifier]];
