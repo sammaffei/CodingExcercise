@@ -13,6 +13,7 @@
     {
     NSString* parsedTitle;
     NSString* parseDescription;
+    NSURL* createdURL;
     }
 
 -(id)initWithDict:(NSDictionary *)dataDict
@@ -21,6 +22,7 @@
         {
         parsedTitle = nil;
         parseDescription = nil;
+        createdURL = nil;
             
         _savedDataDict = dataDict;
         }
@@ -70,7 +72,23 @@
 
 -(NSURL *)imageURL
     {
-    return nil;
+    if (createdURL == nil)
+        {
+        NSDictionary *iconDict = [_savedDataDict objectForKey:@"Icon"];
+            
+        if ((iconDict == nil) || (![iconDict isKindOfClass:[NSDictionary class]]))
+            return nil;
+            
+        NSString *urlStr = [iconDict objectForKey:@"URL"];
+        
+        if ((urlStr == nil) || (![urlStr isKindOfClass:[NSString class]]))
+            return nil;
+            
+
+        createdURL = [NSURL URLWithString:urlStr];
+        }
+        
+    return createdURL;
     }
 
 

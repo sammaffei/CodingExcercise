@@ -10,15 +10,38 @@
 #import "DataMgr.h"
 #import "Constants.h"
 #import "MasterCollectionCells.h"
+#import "DetailViewController.h"
+
+@interface MasterCollectionViewController ()
+
+@property (readonly, nonatomic) Boolean haveCompactWidth;
+
+@end
 
 @implementation MasterCollectionViewController
 
 static NSArray *cellIDStrs;
 
+
+
+/*
+ 
+ var haveCompactWidth : Bool
+ {
+ get
+ {
+ return self.splitViewController!.traitCollection.horizontalSizeClass == .compact
+ }
+ }
+ 
+ */
+
 +(void)initialize
     {
     cellIDStrs = @[[TextOnlyColCell cellIndentifier],[IconColCell cellIndentifier]];
     }
+
+
 
 -(void)setCurColMode:(CollectionViewMode)newMode
     {
@@ -29,6 +52,14 @@ static NSArray *cellIDStrs;
         if (self.collectionView != nil)
             [self.collectionView reloadData];
         }
+    }
+
+-(Boolean)getHaveCompactWidth
+    {
+    if (self.splitViewController == nil)
+        return false;
+        
+    return self.splitViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact;
     }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath
@@ -48,6 +79,35 @@ static NSArray *cellIDStrs;
     [super viewDidLoad];
         
     [DataMgr.sharedInstance addDataModelObserver:self];
+        
+    }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+    {
+    NSString *segueID = [segue identifier];
+    UICollectionView *colView = self.collectionView;
+        
+    if ((segueID == nil) || (colView == nil))
+        return;
+        
+    if ([segueID isEqualToString:@"TextOnlyShowDetail"] ||
+        [segueID isEqualToString:@"IconShowDetail"])
+        {
+        DetailViewController    *controller = (DetailViewController *)((UINavigationController *)segue.destinationViewController).topViewController;
+        NSArray<NSIndexPath *>  *selectedItems = [colView indexPathsForSelectedItems];
+            
+        if ((selectedItems != nil) && (selectedItems.count > 0))
+            {
+            controller.detailItem = [DataMgr.sharedInstance nthItem:[selectedItems objectAtIndex:0].item];
+                
+            controller.navigationItem.leftItemsSupplementBackButton = TRUE;
+            }
+            
+        if (self.haveCompactWidth)
+            {
+            [colView selectItemAtIndexPath:nil animated:TRUE scrollPosition:UICollectionViewScrollPositionNone];
+            }
+        }
     }
 
 #pragma mark Collection View Methods

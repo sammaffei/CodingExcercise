@@ -29,9 +29,9 @@
         }
     
     
-    _textView.text = ((_detailItem == nil) || (_detailItem.title == nil)) ? nil : _detailItem.title;
+    _textView.text = ((_detailItem == nil) || (_detailItem.title == nil)) ? nil : _detailItem.description;
 
-    self.title = _textView.text == nil ? @"Missing" : _textView.text;
+    self.title = _detailItem.title;
     }
 
 
