@@ -7,17 +7,20 @@ platform :ios, '9.0'
 
 # Swift targets
 
-target 'SimpsonsViewer' do
-
+def shared_pods
 	pod 'SDWebImage'
 	pod 'MBProgressHUD'
+end
+
+target 'SimpsonsViewer' do
+
+	shared_pods
 
 end
 
 target 'WireViewer' do
 
-	pod 'SDWebImage'
-	pod 'MBProgressHUD'
+	shared_pods
 
 end
 
@@ -25,15 +28,13 @@ end
 
 target 'SimpsonsViewerOC' do
 
-	pod 'SDWebImage'
-	pod 'MBProgressHUD'
+	shared_pods
 
 end
 
 target 'WireViewerOC' do
 
-	pod 'SDWebImage'
-	pod 'MBProgressHUD'
+	shared_pods
 
 end
 
