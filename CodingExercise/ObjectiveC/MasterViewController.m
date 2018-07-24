@@ -43,6 +43,13 @@ CGFloat defaultModeSelectorHeight = 0.0;
         }
     }
 
+- (void)rotatedNotification:(NSNotification *) notification
+    {
+    if ((self.childCollectionVC != nil) && (self.childCollectionVC.collectionView != nil))
+        [self.childCollectionVC.collectionView reloadData];
+    }
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -52,7 +59,10 @@ CGFloat defaultModeSelectorHeight = 0.0;
         }
     
     self.title = cDataTitleStr;
+    
+    [NSNotificationCenter.defaultCenter addObserver:self selector:@selector(rotatedNotification:) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
+
 
 -(void)setModeSelectorVisibilty:(Boolean)visible
     {
@@ -99,13 +109,6 @@ CGFloat defaultModeSelectorHeight = 0.0;
     // Dispose of any resources that can be recreated.
 }
 
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-    {
-    if ((self.childCollectionVC != nil) && (self.childCollectionVC.collectionView != nil))
-        [self.childCollectionVC.collectionView reloadData];
-    }
-
-
 #pragma mark - Segues
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -116,6 +119,10 @@ CGFloat defaultModeSelectorHeight = 0.0;
         {
         _childCollectionVC = (MasterCollectionViewController *) segue.destinationViewController;
         }
+    }
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
     }
 
 
