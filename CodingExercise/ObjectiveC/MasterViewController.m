@@ -25,7 +25,7 @@
 
 CGFloat defaultModeSelectorHeight = 0.0;
 
--(Boolean)getHaveAnyCompactDimenson
+-(Boolean)haveAnyCompactDimenson
     {
     if (self.splitViewController == nil)
         return true;
@@ -98,6 +98,12 @@ CGFloat defaultModeSelectorHeight = 0.0;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+    {
+    if ((self.childCollectionVC != nil) && (self.childCollectionVC.collectionView != nil))
+        [self.childCollectionVC.collectionView reloadData];
+    }
 
 
 #pragma mark - Segues
