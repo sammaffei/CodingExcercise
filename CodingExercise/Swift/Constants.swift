@@ -1,5 +1,5 @@
 //
-//  Consants.swift
+//  Constants.swift
 //  CodingExcercise
 //
 //  Created by Samuel Maffei on 6/18/18.
