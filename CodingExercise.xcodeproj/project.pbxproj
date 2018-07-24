@@ -24,10 +24,6 @@
 		4B4BA49C20E13483004042C1 /* DataMgr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4BA49A20E13483004042C1 /* DataMgr.swift */; };
 		4B85209C20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
 		4B85209D20D951B9003C447B /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B85209B20D951B9003C447B /* MasterViewController.swift */; };
-		4B976A7B20FD1A0300D56468 /* WireViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7720FD1A0200D56468 /* WireViewer-Info.plist */; };
-		4B976A7C20FD1A0300D56468 /* SimpsonsViewerOC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7820FD1A0200D56468 /* SimpsonsViewerOC-Info.plist */; };
-		4B976A7D20FD1A0300D56468 /* SimpsonsViewer-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7920FD1A0200D56468 /* SimpsonsViewer-Info.plist */; };
-		4B976A7E20FD1A0300D56468 /* WireViewerOC-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B976A7A20FD1A0300D56468 /* WireViewerOC-Info.plist */; };
 		4BADCCCB20E85C3C008DFD2C /* DataMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BADCCCA20E85C3C008DFD2C /* DataMgr.m */; };
 		4BCB4A6720FD16DA00C53572 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BFAC5F620E84BAF00CC331C /* DetailViewController.m */; };
 		4BCB4A6820FD16DA00C53572 /* DataMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BADCCCA20E85C3C008DFD2C /* DataMgr.m */; };
@@ -395,13 +391,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B976A7C20FD1A0300D56468 /* SimpsonsViewerOC-Info.plist in Resources */,
 				4BFB768A20D86F3F00F44CF8 /* LaunchScreen.storyboard in Resources */,
 				4BFB768820D86F2900F44CF8 /* Main.storyboard in Resources */,
 				4B383F0A20D8A64200708F6F /* Assets.xcassets in Resources */,
-				4B976A7B20FD1A0300D56468 /* WireViewer-Info.plist in Resources */,
-				4B976A7E20FD1A0300D56468 /* WireViewerOC-Info.plist in Resources */,
-				4B976A7D20FD1A0300D56468 /* SimpsonsViewer-Info.plist in Resources */,
 				4BFB768D20D8703600F44CF8 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
