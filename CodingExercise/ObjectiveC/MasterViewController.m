@@ -16,11 +16,24 @@
 @property (strong, nonatomic) IBOutlet NSLayoutConstraint *modeSelectorHeightConstraint;
 @property (weak, nonatomic) MasterCollectionViewController *childCollectionVC;
 
+@property (readonly, nonatomic) Boolean haveAnyCompactDimenson;
+
+
 @end
 
 @implementation MasterViewController
 
 CGFloat defaultModeSelectorHeight = 0.0;
+
+-(Boolean)getHaveAnyCompactDimenson
+    {
+    if (self.splitViewController == nil)
+        return true;
+        
+    return (self.splitViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) ||
+        (self.splitViewController.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassCompact);
+    }
+
 
 - (IBAction)performModeSwitch:(UISegmentedControl *)sender
     {
@@ -72,7 +85,7 @@ CGFloat defaultModeSelectorHeight = 0.0;
 
     if (self.splitViewController != nil)
         {
-        [self setModeSelectorVisibilty:self.splitViewController.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact];
+        [self setModeSelectorVisibilty:self.haveAnyCompactDimenson];
         }
     }
 

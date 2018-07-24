@@ -86,6 +86,9 @@ static NSArray *cellIDStrs;
             {
             controller.detailItem = [DataMgr.sharedInstance nthItem:[selectedItems objectAtIndex:0].item];
                 
+            if (self.splitViewController != nil)
+               controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+                
             controller.navigationItem.leftItemsSupplementBackButton = TRUE;
             }
             
