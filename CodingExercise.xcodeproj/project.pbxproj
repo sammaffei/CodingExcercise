@@ -340,6 +340,10 @@
 					};
 					4BFB765E20D86CEF00F44CF8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 1000;
+					};
+					4BFB767320D86D4700F44CF8 = {
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -588,6 +592,7 @@
 					"WIREVIEWERAPP=1",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewerOC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -611,6 +616,7 @@
 					"WIREVIEWERAPP=1",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewerOC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -634,6 +640,7 @@
 					"SIMPSONSVIEWERAPP=1",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewerOC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -657,6 +664,7 @@
 					"SIMPSONSVIEWERAPP=1",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewerOC-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -789,6 +797,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -797,7 +806,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "SIMPSONSVIEWERAPP DEBUG";
 				SWIFT_OBJC_BRIDGING_HEADER = CodingExercise/Swift/ObjCBridgingHeader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -810,6 +819,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/SimpsonsViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -818,7 +828,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SIMPSONSVIEWERAPP;
 				SWIFT_OBJC_BRIDGING_HEADER = CodingExercise/Swift/ObjCBridgingHeader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -831,6 +841,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -839,7 +850,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "WIREVIEWERAPP DEBUG";
 				SWIFT_OBJC_BRIDGING_HEADER = CodingExercise/Swift/ObjCBridgingHeader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -852,6 +863,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BB7XDTTD86;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plists/WireViewer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -860,7 +872,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = WIREVIEWERAPP;
 				SWIFT_OBJC_BRIDGING_HEADER = CodingExercise/Swift/ObjCBridgingHeader.h;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
