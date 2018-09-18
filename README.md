@@ -5,8 +5,9 @@ iOS Engineer Candidate Code Exercise
 ### Building the Targets
 
 - This project uses CocoaPods.
+- This project requires Xcode 10.
 - After cloning the project from GitHub, run "`pod install`" in the project directory.
-- Launch the project in Xcode 9 by opening the "CodingExercise.xcworkspace".
+- Launch the project in Xcode 10 by opening the "CodingExercise.xcworkspace".
 - There are two targets that you can build "SimpsonsViewer" and "WireViewer"
 - If you need to install CocoaPods, you can look here https://guides.cocoapods.org/using/getting-started.html
 
