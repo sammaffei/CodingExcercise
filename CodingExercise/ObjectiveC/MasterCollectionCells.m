@@ -29,6 +29,13 @@
     _textLabel.text = (inData == nil) ? nil : [inData title];
     }
 
+- (void)setSelected:(BOOL)selected {
+    
+    self.contentView.backgroundColor = selected ? self.selectedColor : self.unselectedColor;
+    
+    super.selected = selected;
+}
+
 @end
 
 // ------------------------------------------------------------------------------------------------
@@ -51,5 +58,13 @@
         [_imageView sd_setImageWithURL:inData.imageURL];
         }
     }
+
+- (void)setSelected:(BOOL)selected
+    {
+    _imageView.backgroundColor = selected ? self.selectedColor : self.unselectedColor;
+    
+    super.selected = selected;
+    }
+
 
 @end
