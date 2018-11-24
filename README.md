@@ -5,7 +5,7 @@ iOS Engineer Candidate Code Exercise
 
 ### Requirement doc
 
-i- OS-code-exercise.pdf
+iOS-code-exercise.pdf
 
 ### Building the Targets
 
